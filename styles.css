@@ -155,7 +155,7 @@ body {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/about-header-bg.jpg');
     background-size: cover;
     background-position: center;
-    color: #fff;
+    color: black;
     padding: 120px 0;
     position: relative;
 }
@@ -222,6 +222,7 @@ body {
     background-size: cover;
     color: black;
     padding: 150px 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .services-header h1 {
@@ -341,12 +342,8 @@ footer .col-md-6.col-lg-3 a {
 
 .admin-login-body {
     background-color: #1A0C02;
-    height: 100vh;
-    margin: 0;
-    padding: 0;
+    min-height: 100vh;
     display: flex;
-    align-items: center;
-    justify-content: center;
     font-family: 'Poppins', sans-serif;
     color: #fff;
 }
@@ -354,7 +351,7 @@ footer .col-md-6.col-lg-3 a {
 .admin-login-container {
     width: 90%;
     max-width: 1000px;
-    height: 600px;
+    margin: auto;
     background-color: #1A0C02;
     border-radius: 10px;
     overflow: hidden;
@@ -380,6 +377,10 @@ footer .col-md-6.col-lg-3 a {
 
 .logo-content {
     text-align: center;
+}
+
+.form-section .login-form-container {
+    padding: 20px;
 }
 
 .admin-logo {
@@ -447,6 +448,10 @@ footer .col-md-6.col-lg-3 a {
 .inputGroup label {
     position: absolute;
     left: -9999px;
+}
+
+.row.h-100 {
+    min-height: 600px;
 }
 
 .form-options {
