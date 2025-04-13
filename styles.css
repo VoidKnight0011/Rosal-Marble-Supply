@@ -1,5 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 body {
     color: #fff;
+    font-family: "Poppins";
 }
 
 .navbar {
@@ -43,6 +46,10 @@ body {
     padding: 15px 30px;
     font-size: 18px;
     font-weight: bold;
+}
+
+.btn-secondary:hover{
+    background-color: #89672d;
 }
 
 .btn-tertiary {
@@ -100,6 +107,10 @@ body {
     pointer-events: none;
 }
 
+.btn-tertiary:hover{
+    background-color: #89672d;
+}
+
 .prev-btn, .next-btn {
     background: rgba(255,255,255,0.3);
     border: none;
@@ -139,6 +150,50 @@ body {
     border-radius: 5px;
 }
 
+.about-header {
+    background-color: #E5E5E5;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/about-header-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    padding: 120px 0;
+    position: relative;
+}
+
+.about-header h1 {
+    font-weight: bold;
+    font-size: 48px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.about-content {
+    padding: 80px 0;
+    background-color: #fff;
+    color: #333;
+}
+
+.about-text {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.about-image {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.about-image img {
+    width: 100%;
+    transition: transform 0.5s ease;
+}
+
+.about-image:hover img {
+    transform: scale(1.03);
+}
+
 .services-clients {
     padding: 80px 0;
     background-color: #fff;
@@ -160,6 +215,63 @@ body {
 .placeholder-lines {
     margin: 30px 0;
     width: 80%;
+}
+
+.services-header {
+    background: url('images/rosal-services.jpg') no-repeat center center;
+    background-size: cover;
+    color: black;
+    padding: 150px 0;
+}
+
+.services-header h1 {
+    font-weight: bold;
+}
+
+.services-section {
+    background-color: #fff;
+    padding: 60px 0;
+}
+
+.service-item {
+    height: 100%;
+    transition: transform 0.3s ease;
+}
+
+.service-item:hover {
+    transform: translateY(-5px);
+}
+
+.service-image {
+    height: 350px;
+    overflow: hidden;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.service-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.service-item:hover .service-image img {
+    transform: scale(1.05);
+}
+
+.service-title {
+    font-weight: bold;
+    color: #333;
+    font-size: 26px;
+    margin-bottom: 15px;
+}
+
+.service-description {
+    color: #666;
+    font-size: 16px;
+    line-height: 1.7;
 }
 
 footer {
@@ -187,7 +299,19 @@ footer p, footer a {
     align-items: center;
     gap: 10px;
     text-decoration: none;
-    transition: color 0.3s ease;
+    transition: color 0.3s ease-in-out ;
+}
+
+footer .col-md-6.col-lg-3 a {
+    text-decoration: none;
+}
+
+.col-md-6.col-lg-3 a:hover {
+    text-decoration: underline;
+}
+
+.social-links a:hover{
+    color: #1877F2;
 }
 
 @media (min-width: 1600px) {
@@ -212,4 +336,177 @@ footer p, footer a {
     .slider-controls {
         padding: 0 2%;
     }
+}
+
+
+.admin-login-body {
+    background-color: #1A0C02;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+}
+
+.admin-login-container {
+    width: 90%;
+    max-width: 1000px;
+    height: 600px;
+    background-color: #1A0C02;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.logo-section {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.logo-section::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 10%;
+    height: 80%;
+    width: 1px;
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.logo-content {
+    text-align: center;
+}
+
+.admin-logo {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    background-color: #fff;
+    padding: 5px;
+}
+
+.company-name {
+    font-size: 32px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.form-section {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-form-container {
+    width: 80%;
+}
+
+.form-title {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    text-align: left;
+}
+
+.inputGroup {
+    position: relative;
+    margin-bottom: 25px;
+}
+
+.inputGroup i {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #999;
+    font-size: 18px;
+}
+
+.inputGroup input {
+    width: 100%;
+    padding: 12px 40px 12px 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #e5e5e5;
+    color: #333;
+    font-size: 16px;
+}
+
+.inputGroup input:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px #D9A243;
+}
+
+.inputGroup label {
+    position: absolute;
+    left: -9999px;
+}
+
+.form-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.remember-me {
+    display: flex;
+    align-items: center;
+}
+
+.remember-me input[type="checkbox"] {
+    margin-right: 8px;
+    accent-color: #D9A243;
+}
+
+.forgot-password {
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+.forgot-password:hover {
+    color: #D9A243;
+    text-decoration: underline;
+}
+
+.login-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #D9A243;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.login-btn:hover {
+    background-color: #c69238;
+}
+
+.back-to-site {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.back-to-site a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+.back-to-site a:hover {
+    color: #D9A243;
 }
