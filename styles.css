@@ -170,11 +170,11 @@ body {
 .services-clients {
     padding: 80px 0;
     background-color: white;
-    color: #000;
+    color: black;
 }
 
 .services-box, .clients-box {
-    background-color: #E5E5E5;
+    color: white;
     padding: 40px;
     text-align: center;
     border-radius: 5px;
@@ -185,6 +185,28 @@ body {
     align-items: center;
 }
 
+.clients-box {
+    background: 
+        linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+        url(images/rosal-carousel_2.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.services-box {
+    background: 
+        linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+        url(images/rosal-carousel_3.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.services-box h2, .clients-box h2{
+    font-weight: bolder;
+}
+
 .placeholder-lines {
     margin: 30px 0;
     width: 80%;
@@ -192,12 +214,155 @@ body {
 
 /* ----- Our Products ----- */
 
+.products-header {
+    background-image: 
+        linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url('images/rosal-products.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    color: white;
+    padding: 150px 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.products-grid {
+    background-color: white;
+    padding: 60px 0;
+    color: #333;
+}
+
+.product-card {
+    background-color: white;
+    color: black;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.product-image {
+    height: 250px;
+    overflow: hidden;
+    position: relative;
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.product-card:hover .product-image img {
+    transform: scale(1.05);
+}
+
+.product-info {
+    padding: 20px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.product-title {
+    font-weight: bold;
+    color: #333;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.product-description {
+    color: #666;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+
+
+.modal-content {
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.modal-header {
+    background-color: #1A0C02;
+    color: white;
+    border-bottom: none;
+    padding: 15px 20px;
+}
+
+.modal-title {
+    font-weight: bold;
+}
+
+.btn-close {
+    color: white;
+    filter: invert(1) brightness(200%);
+}
+
+.modal-body {
+    padding: 25px;
+}
+
+.modal-product-image {
+    height: 300px;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.modal-product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.modal-footer {
+    border-top: none;
+    padding: 15px 20px;
+}
+
+.product-details .detail-item {
+    margin-bottom: 10px;
+}
+
+.product-details strong {
+    color: #1A0C02;
+}
+
+.product-inquiry {
+    background-color: #f8f8f8;
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+.product-quote-btn {
+    width: 100%;
+    margin-top: 10px;
+}
 
 
 /* ----- Services ----- */
 
 .services-header {
-    background: url('images/rosal-services.jpg') no-repeat center center;
+    background-image: 
+        linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url('images/rosal-carousel_2.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
     background-size: cover;
     color: white;
     padding: 150px 0;
@@ -257,13 +422,15 @@ body {
 /* ----- About Us ----- */
 
 .about-header {
-    background-color: #E5E5E5;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/about-header-bg.jpg');
+    background-image: 
+        linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url('images/rosal-about.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
     background-size: cover;
-    background-position: center;
     color: white;
-    padding: 120px 0;
-    position: relative;
+    padding: 150px 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .about-header h1 {
@@ -289,17 +456,18 @@ body {
 
 .contact-section {
     background-color: #E5E5E5;
-    background-image: linear-gradient(rgba(229, 229, 229, 0.9), rgba(229, 229, 229, 0.9)), url('images/marble-texture.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5)), url('images/rosal-quote.jpg');
     background-size: cover;
     background-position: center;
-    min-height: calc(100vh - 350px); /* Adjust based on your navbar and footer height */
+    min-height: calc(100vh - 350px);
     display: flex;
     align-items: center;
     padding: 60px 0;
 }
 
 .contact-form-container {
-    background-color: #111;
+    border: 2.5px solid white;
+    backdrop-filter: blur(3px);
     color: white;
     padding: 40px;
     border-radius: 10px;
@@ -314,7 +482,7 @@ body {
 }
 
 .form-control, .form-select {
-    background-color: #f5f5f5;
+    background-color: white;
     border: none;
     padding: 12px 15px;
     font-size: 16px;
@@ -323,8 +491,8 @@ body {
 }
 
 .form-control:focus, .form-select:focus {
-    box-shadow: 0 0 0 3px rgba(217, 162, 67, 0.3);
-    border-color: #D9A243;
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.3);
+    border-color: white;
 }
 
 textarea.form-control {
@@ -509,6 +677,205 @@ textarea.form-control {
     color: #D9A243;
 }
 
+.admin-container {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Sidebar Styles */
+.sidebar {
+    width: 245px;
+    background-color: #1A0C02;
+    color: white;
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.logo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.admin-logo {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: white;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+.company-name {
+    font-size: 16px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.admin-welcome {
+    padding: 0 20px;
+    margin-bottom: 30px;
+}
+
+.admin-welcome h2 {
+    font-size: 24px;
+    font-weight: 700;
+    margin: 0;
+}
+
+.admin-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.admin-nav li {
+    margin-bottom: 5px;
+}
+
+.admin-nav a {
+    display: flex;
+    align-items: center;
+    padding: 12px 20px;
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.admin-nav a:hover, .admin-nav li.active a {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+}
+
+.admin-nav i {
+    margin-right: 10px;
+    width: 20px;
+    text-align: center;
+}
+
+/* Main Content Styles */
+.main-content {
+    flex: 1;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.admin-header {
+    background-color: #1A0C02;
+    color: white;
+    padding: 20px 30px;
+    margin-bottom: 30px;
+}
+
+.admin-header h1 {
+    margin: 0;
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.content-container {
+    padding: 0 30px 30px;
+}
+
+/* Table Styles */
+.card {
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    border: none;
+    margin-bottom: 30px;
+}
+
+.product-table {
+    margin-bottom: 0;
+}
+
+.product-table thead {
+    background-color: #f8f8f8;
+}
+
+.product-table th {
+    font-weight: 600;
+    color: #555;
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+}
+
+.product-table td {
+    padding: 15px;
+    vertical-align: middle;
+    border-bottom: 1px solid #eee;
+}
+
+.product-table tbody tr:hover {
+    background-color: #f9f9f9;
+}
+
+/* Button Styles */
+.btn-primary {
+    background-color: #D9A243;
+    border-color: #D9A243;
+    color: white;
+    font-weight: 600;
+    padding: 8px 20px;
+}
+
+.btn-primary:hover {
+    background-color: #c69238;
+    border-color: #c69238;
+}
+
+.btn-secondary {
+    background-color: #6c757d;
+    border-color: #6c757d;
+}
+
+.btn-edit {
+    color: #4a6fdc;
+    background: none;
+    border: none;
+}
+
+.btn-delete {
+    color: #dc4a4a;
+    background: none;
+    border: none;
+}
+
+.btn-edit:hover, .btn-delete:hover {
+    opacity: 0.8;
+}
+
+.admin-actions {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.modal-header {
+    background-color: #1A0C02;
+    color: white;
+    border-bottom: none;
+}
+
+.modal-title {
+    font-weight: 600;
+}
+
+.btn-close {
+    filter: invert(1) brightness(200%);
+}
+
+.modal-footer {
+    border-top: none;
+}
+
+.form-label {
+    font-weight: 500;
+    color: #555;
+}
+
         /* ----------------------- */
 
         @media (min-width: 1600px) {
@@ -528,7 +895,7 @@ textarea.form-control {
                 padding: 0 4%;
             }
         }
-        
+
         @media (max-width: 576px) {
             .contact-section {
                 padding: 40px 0;
@@ -593,3 +960,4 @@ textarea.form-control {
     .social-links a:hover {
         color: #1877F2;
     }
+

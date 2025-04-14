@@ -67,3 +67,32 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+  const productModal = document.getElementById('productModal');
+  
+  if (productModal) {
+      productModal.addEventListener('show.bs.modal', function(event) {
+          const button = event.relatedTarget;
+          
+          const productId = button.getAttribute('data-product-id');
+          const productName = button.getAttribute('data-product-name');
+          const productDesc = button.getAttribute('data-product-desc');
+          const productImage = button.getAttribute('data-product-image');
+          const productOrigin = button.getAttribute('data-product-origin');
+          const productFinish = button.getAttribute('data-product-finish');
+          
+          document.getElementById('modalProductName').textContent = productName;
+          document.getElementById('modalProductDesc').textContent = productDesc;
+          document.getElementById('modalProductOrigin').textContent = productOrigin;
+          document.getElementById('modalProductFinish').textContent = productFinish;
+          
+          const modalImage = document.getElementById('modalProductImage');
+          modalImage.src = productImage;
+          modalImage.alt = productName;
+          
+          const quoteBtn = document.getElementById('modalQuoteBtn');
+          quoteBtn.href = `contact.html?product=${encodeURIComponent(productName)}`;
+      });
+  }
+});
