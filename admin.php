@@ -1,3 +1,38 @@
+<?php
+session_start();
+
+include("connection.php");
+include("functions.php");
+
+if ($_SERVER['REQUEST_METHOD'] == "POST") {
+    $username = $_POST['username'];
+    $password = $_POST['password'];
+
+    if (!empty($username) && !empty($password) && !is_numeric($username)) {
+
+        $query = "SELECT * FROM admin WHERE username = '$username' LIMIT 1";
+        $result = mysqli_query($con, $query);
+
+        if ($result && mysqli_num_rows($result) > 0) {
+            $user_data = mysqli_fetch_assoc($result);
+
+            if ($user_data['password'] === $password) {
+                $_SESSION['admin_id'] = $user_data['admin_id'];
+                header("Location: admin-dashboard.php");
+                die;
+            } else {
+                echo "Incorrect password!";
+            }
+        } else {
+            echo "No user found with that username!";
+        }
+    } else {
+        echo "Please enter some valid information!";
+    }
+}
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,22 +57,22 @@
             <div class="col-md-6 form-section">
                 <div class="login-form-container">
                     <h1 class="form-title">Admin Login</h1>
-                    <form method="post" action="admin-login.php">
+                    <form method="post" action="">
                         <div class="inputGroup">
                             <i class="bi bi-person-fill"></i>
-                            <input type="text" name="username" id="username" placeholder="Username" required>
+                            <input type="text" name="username" id="text" placeholder="Username" required>
                             <label for="username">Username</label>
                         </div>
                         <div class="inputGroup">
                             <i class="bi bi-lock-fill"></i>
-                            <input type="password" name="password" id="password" placeholder="Password" required>
+                            <input type="password" name="password" id="text" placeholder="Password" required>
                             <label for="password">Password</label>
                         </div>
 
                         <input type="submit" class="btn btn-primary login-btn" value="Login" name="adminLogin">
                     </form>
                     <div class="back-to-site">
-                        <a href="home.html"><i class="bi bi-arrow-left"></i> Back to Website</a>
+                        <a href="home.php"><i class="bi bi-arrow-left"></i> Back to Website</a>
                     </div>
                 </div>
             </div>

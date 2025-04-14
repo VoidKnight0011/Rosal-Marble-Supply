@@ -47,28 +47,6 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 document.addEventListener('DOMContentLoaded', function() {
-  const pageLinks = document.querySelectorAll('.page-link');
-  
-  pageLinks.forEach(link => {
-    link.addEventListener('click', function(e) {
-      e.preventDefault();
-      const pageNumber = this.getAttribute('data-page');
-      
-      document.querySelectorAll('[id^="gallery-page-"]').forEach(page => {
-        page.classList.add('d-none');
-      });
-      
-      document.querySelectorAll('.page-item').forEach(item => {
-        item.classList.remove('active');
-      });
-      
-      document.getElementById(`gallery-page-${pageNumber}`).classList.remove('d-none');
-      this.parentElement.classList.add('active');
-    });
-  });
-});
-
-document.addEventListener('DOMContentLoaded', function() {
   const productModal = document.getElementById('productModal');
   
   if (productModal) {

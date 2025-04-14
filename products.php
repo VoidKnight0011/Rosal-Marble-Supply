@@ -17,17 +17,17 @@
             </button>
     
             <div class="collapse navbar-collapse d-lg-flex" id="navbarNav">
-                <a class="navbar-brand col-lg-3 me-0" href="home.html">
+                <a class="navbar-brand col-lg-3 me-0" href="home.php">
                     <img src="images/rosal_marble_supply-logo.jpg" alt="RMS Logo" class="logo-img">
                 </a>
                 <ul class="navbar-nav col-lg-6 justify-content-lg-center">
-                    <li class="nav-item"><a class="nav-link" href="home.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="products.html">Our Products</a></li>
-                    <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
-                    <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="home.php">Home</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="products.php">Our Products</a></li>
+                    <li class="nav-item"><a class="nav-link" href="services.php">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.php">About Us</a></li>
                 </ul>
                 <div class="d-lg-flex col-lg-3 justify-content-lg-end">
-                    <a href="quote.html" class="btn btn-primary">GET A QUOTE</a>
+                    <a href="quote.php" class="btn btn-primary">GET A QUOTE</a>
                 </div>
             </div>
         </div>
@@ -584,7 +584,7 @@
                             
                             <div class="product-inquiry">
                                 <h5 class="mb-3">Interested in this product?</h5>
-                                <a href="contact.html" class="btn btn-primary product-quote-btn" id="modalQuoteBtn">
+                                <a href="contact.php" class="btn btn-primary product-quote-btn" id="modalQuoteBtn">
                                     Get a Quote for This Product
                                 </a>
                             </div>
@@ -608,9 +608,9 @@
                 <div class="col-md-6 col-lg-3 mb-4 mb-lg-0">
                     <h4 class="mb-3">COMPANY</h4>
                     <ul class="list-unstyled">
-                        <li class="mb-2"><a href="services.html">Our Services</a></li>
-                        <li class="mb-2"><a href="clients.html">Our Clients</a></li>
-                        <li class="mb-2"><a href="about.html">About Us</a></li>
+                        <li class="mb-2"><a href="services.php">Our Services</a></li>
+                        <li class="mb-2"><a href="clients.php">Our Clients</a></li>
+                        <li class="mb-2"><a href="about.php">About Us</a></li>
                     </ul>
                 </div>
                 <div class="col-md-6 col-lg-4">

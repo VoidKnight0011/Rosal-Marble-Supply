@@ -16,17 +16,17 @@
             </button>
     
             <div class="collapse navbar-collapse d-lg-flex" id="navbarNav">
-                <a class="navbar-brand col-lg-3 me-0" href="home.html">
+                <a class="navbar-brand col-lg-3 me-0" href="home.php">
                     <img src="images/rosal_marble_supply-logo.jpg" alt="RMS Logo" class="logo-img">
                 </a>
                 <ul class="navbar-nav col-lg-6 justify-content-lg-center">
-                    <li class="nav-item"><a class="nav-link active" href="home.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="products.html">Our Products</a></li>
-                    <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
-                    <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="home.php">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="products.php">Our Products</a></li>
+                    <li class="nav-item"><a class="nav-link" href="services.php">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.php">About Us</a></li>
                 </ul>
                 <div class="d-lg-flex col-lg-3 justify-content-lg-end">
-                    <a href="quote.html" class="btn btn-primary">GET A QUOTE</a>
+                    <a href="quote.php" class="btn btn-primary">GET A QUOTE</a>
                 </div>
             </div>
         </div>
@@ -37,7 +37,7 @@
             <div class="row justify-content-center position-relative">
                 <div class="col-md-10 text-center">
                     <h1 class="mb-4">Struggling to Find Quality Stones and Expert Installation Services?</h1>
-                    <a href="products.html" class="btn btn-secondary">Visit Our Products</a>
+                    <a href="products.php" class="btn btn-secondary">Visit Our Products</a>
                 </div>
             </div>
         </div>
@@ -54,7 +54,7 @@
                 <div class="col-lg-6 mb-4 mb-lg-0">
                     <h2 class="mb-4">About Us</h2>
                     <p>Rosal Marble Supply is your trusted partner for all your stone-related needs in Cebu City, Philippines. We are not just a supplier; we are your solution to creating breathtaking landscapes and interiors.</p>
-                    <a href="about.html" class="btn btn-tertiary">More About Us <i class="fas fa-arrow-right"></i></a>
+                    <a href="about.php" class="btn btn-tertiary">More About Us <i class="fas fa-arrow-right"></i></a>
                 </div>
                 <div class="col-lg-6">
                     <img src="images/rosal-img_1.jpg" alt="rosal/rosal-img_1" class="about-image">
@@ -70,14 +70,14 @@
                     <div class="services-box h-100">
                         <h2>OUR SERVICES</h2>
                         <div class="placeholder-lines"><p> We take pride in offering a wide variety of colors, textures, and sizes, ensuring you'll find the ideal materials to bring your vision to life.</p></div>
-                        <a href="services.html" class="btn btn-tertiary">VIEW MORE <i class="fas fa-arrow-right"></i></a>
+                        <a href="services.php" class="btn btn-tertiary">VIEW MORE <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="clients-box h-100">
                         <h2>OUR CLIENTS</h2>
                         <div class="placeholder-lines"><p>Transform your space with Rosal Marble Supply. We deliver premium stones, expert installations, and personalized landscaping solutions—designed to elevate your property and make your vision a reality.</p></div>
-                        <a href="clients.html" class="btn btn-tertiary">VIEW MORE <i class="fas fa-arrow-right"></i></a>
+                        <a href="clients.php" class="btn btn-tertiary">VIEW MORE <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
             </div>
@@ -94,9 +94,9 @@
                 <div class="col-md-6 col-lg-3 mb-4 mb-lg-0">
                     <h4 class="mb-3">COMPANY</h4>
                     <ul class="list-unstyled">
-                        <li class="mb-2"><a href="services.html">Our Services</a></li>
-                        <li class="mb-2"><a href="clients.html">Our Clients</a></li>
-                        <li class="mb-2"><a href="about.html">About Us</a></li>
+                        <li class="mb-2"><a href="services.php">Our Services</a></li>
+                        <li class="mb-2"><a href="clients.php">Our Clients</a></li>
+                        <li class="mb-2"><a href="about.php">About Us</a></li>
                     </ul>
                 </div>
                 <div class="col-md-6 col-lg-4">

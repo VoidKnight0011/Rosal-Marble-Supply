@@ -1,9 +1,20 @@
+<?php
+session_start();
+    include("connection.php");
+    include("functions.php");
+
+    $user_data = check_login($con);
+
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin Dashboard - Rosal Marble Supply</title>
+    <title>Admin Dashboard</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
@@ -28,7 +39,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="admin.html">
+                        <a href="logout.php">
                             <i class="fas fa-sign-out-alt"></i> Log Out
                         </a>
                     </li>
@@ -49,6 +60,7 @@
                                 <thead>
                                     <tr>
                                         <th>Product ID</th>
+                                        <th>Product Image</th>
                                         <th>Product Name</th>
                                         <th>Description</th>
                                         <th>Price</th>
@@ -59,6 +71,7 @@
                                 <tbody>
                                     <tr>
                                         <td>001</td>
+                                        <td></td>
                                         <td>White Carrara Marble</td>
                                         <td>Premium Italian marble with elegant gray veining</td>
                                         <td>$75.00/sq.ft</td>
@@ -70,6 +83,7 @@
                                     </tr>
                                     <tr>
                                         <td>002</td>
+                                        <td></td>
                                         <td>Calacatta Gold</td>
                                         <td>Luxurious marble with distinctive gold veining</td>
                                         <td>$120.00/sq.ft</td>
@@ -81,6 +95,7 @@
                                     </tr>
                                     <tr>
                                         <td>003</td>
+                                        <td></td>
                                         <td>Emperador Dark</td>
                                         <td>Rich brown marble with subtle veining patterns</td>
                                         <td>$85.00/sq.ft</td>
@@ -92,6 +107,7 @@
                                     </tr>
                                     <tr>
                                         <td>004</td>
+                                        <td></td>
                                         <td>Statuario Marble</td>
                                         <td>Classic white marble with dramatic gray veining</td>
                                         <td>$95.00/sq.ft</td>
@@ -103,6 +119,7 @@
                                     </tr>
                                     <tr>
                                         <td>005</td>
+                                        <td></td>
                                         <td>Nero Marquina</td>
                                         <td>Striking black marble with white veining</td>
                                         <td>$90.00/sq.ft</td>
