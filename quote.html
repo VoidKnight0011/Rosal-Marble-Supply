@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rosal Marble Supply</title>
+    <title>Get a Quote - Rosal Marble Supply</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="contact.css">
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark">
@@ -20,64 +21,53 @@
                     <img src="images/rosal_marble_supply-logo.jpg" alt="RMS Logo" class="logo-img">
                 </a>
                 <ul class="navbar-nav col-lg-6 justify-content-lg-center">
-                    <li class="nav-item"><a class="nav-link active" href="home.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="home.html">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="products.html">Our Products</a></li>
                     <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
                     <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
                 </ul>
                 <div class="d-lg-flex col-lg-3 justify-content-lg-end">
-                    <a href="quote.html" class="btn btn-primary">GET A QUOTE</a>
+                    <a href="contact.html" class="btn btn-primary active">GET A QUOTE</a>
                 </div>
             </div>
         </div>
     </nav>
 
-    <section class="hero py-5 position-relative">
-        <div class="container" id="second">
-            <div class="row justify-content-center position-relative">
-                <div class="col-md-10 text-center">
-                    <h1 class="mb-4">Struggling to Find Quality Stones and Expert Installation Services?</h1>
-                    <a href="products.html" class="btn btn-secondary">Visit Our Products</a>
-                </div>
-            </div>
-        </div>
-
-            <div class="slider-controls">
-                <button class="prev-btn"><i class="fas fa-chevron-left"></i></button>
-                <button class="next-btn"><i class="fas fa-chevron-right"></i></button>
-            </div>
-    </section>
-
-    <section class="about-section py-5">
+    <!-- Contact Form Section -->
+    <section class="contact-section py-5">
         <div class="container">
-            <div class="row">
-                <div class="col-lg-6 mb-4 mb-lg-0">
-                    <h2 class="mb-4">About Us</h2>
-                    <p>Rosal Marble Supply is your trusted partner for all your stone-related needs in Cebu City, Philippines. We are not just a supplier; we are your solution to creating breathtaking landscapes and interiors.</p>
-                    <a href="about.html" class="btn btn-tertiary">More About Us <i class="fas fa-arrow-right"></i></a>
-                </div>
-                <div class="col-lg-6">
-                    <img src="images/rosal-img_1.jpg" alt="rosal/rosal-img_1" class="about-image">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="services-clients py-5">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6 mb-4 mb-md-0">
-                    <div class="services-box h-100">
-                        <h2>OUR SERVICES</h2>
-                        <div class="placeholder-lines"><p> We take pride in offering a wide variety of colors, textures, and sizes, ensuring you'll find the ideal materials to bring your vision to life.</p></div>
-                        <a href="services.html" class="btn btn-tertiary">VIEW MORE <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="clients-box h-100">
-                        <h2>OUR CLIENTS</h2>
-                        <div class="placeholder-lines"><p>Hello World</p></div>
-                        <a href="clients.html" class="btn btn-tertiary">VIEW MORE <i class="fas fa-arrow-right"></i></a>
+            <div class="row justify-content-center">
+                <div class="col-md-10 col-lg-8">
+                    <div class="contact-form-container">
+                        <h1 class="form-title text-center mb-4">SEND A MESSAGE TO US</h1>
+                        <form id="contactForm" action="send-message.php" method="post">
+                            <div class="mb-3">
+                                <input type="text" class="form-control" id="name" name="name" placeholder="Your Name" required>
+                            </div>
+                            <div class="mb-3">
+                                <input type="email" class="form-control" id="email" name="email" placeholder="Your Email" required>
+                            </div>
+                            <div class="mb-3">
+                                <input type="tel" class="form-control" id="phone" name="phone" placeholder="Phone Number" required>
+                            </div>
+                            <div class="mb-3">
+                                <input type="text" class="form-control" id="subject" name="subject" placeholder="Subject" required>
+                            </div>
+                            <div class="mb-3">
+                                <select class="form-select" id="recipient" name="recipient">
+                                    <option value="" selected>Email Recipient</option>
+                                    <option value="sales">Sales Department</option>
+                                    <option value="support">Customer Support</option>
+                                    <option value="info">General Information</option>
+                                </select>
+                            </div>
+                            <div class="mb-4">
+                                <textarea class="form-control" id="message" name="message" rows="6" placeholder="Your Message" required></textarea>
+                            </div>
+                            <div class="d-grid">
+                                <button type="submit" class="btn btn-primary btn-send">Send</button>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>
@@ -125,6 +115,6 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="script.js"></script>
+    <script src = "script.js"></script>
 </body>
 </html>

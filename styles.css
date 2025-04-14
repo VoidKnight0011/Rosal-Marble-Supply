@@ -5,63 +5,73 @@ body {
     font-family: "Poppins";
 }
 
-.navbar {
-    background-color: #1A0C02;
-    padding: 20px 0;
-}
+    /* ----- Navigation ----- */
 
-.logo-img {
-    height: 45px;
-    width: 45px;
-    border-radius: 50%;
-    background-color: #fff;
-}
+    .navbar {
+        background-color: #1A0C02;
+        padding: 20px 0;
+    }
 
-.navbar-nav .nav-link {
-    color: white;
-    font-weight: 500;
-    margin: 0 15px;
-}
+    .logo-img {
+        height: 45px;
+        width: 45px;
+        border-radius: 50%;
+        background-color: white;
+    }
 
-.navbar-nav .nav-link.active {
-    font-weight: bold;
-}
+    .navbar-nav .nav-link {
+        color: white;
+        font-weight: 500;
+        margin: 0 15px;
+    }
 
-.btn-primary {
-    background-color: #D9A243;
-    border-color: #D9A243;
-    color: white;
-    font-weight: bold;
-}
+    .navbar-nav .nav-link.active {
+        font-weight: bold;
+    }
 
-.btn-primary:hover {
-    background-color: #c69238;
-    border-color: #c69238;
-}
+        /* ----- EXTRA: Buttons ----- */
 
-.btn-secondary {
-    background-color: #D9A243;
-    border-color: #D9A243;
-    color: white;
-    padding: 15px 30px;
-    font-size: 18px;
-    font-weight: bold;
-}
+        .btn-primary {
+            background-color: #D9A243;
+            border-color: #D9A243;
+            color: white;
+            font-weight: bold;
+        }
 
-.btn-secondary:hover{
-    background-color: #89672d;
-}
+        .btn-primary:hover {
+            background-color: #c69238;
+            border-color: #c69238;
+        }
 
-.btn-tertiary {
-    background-color: #D9A243;
-    border-color: #D9A243;
-    color: white;
-    padding: 10px 20px;
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    font-weight: bold;
-}
+        .btn-secondary {
+            background-color: #D9A243;
+            border-color: #D9A243;
+            color: white;
+            padding: 15px 30px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .btn-secondary:hover {
+            background-color: #89672d;
+        }
+
+        .btn-tertiary {
+            background-color: #D9A243;
+            border-color: #D9A243;
+            color: white;
+            padding: 10px 20px;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: bold;
+        }
+
+        .btn-tertiary:hover {
+            background-color: #89672d;
+        }
+
+/* ----- Home Page ----- */
 
 .hero {
     overflow-x: hidden;
@@ -107,10 +117,6 @@ body {
     pointer-events: none;
 }
 
-.btn-tertiary:hover{
-    background-color: #89672d;
-}
-
 .prev-btn, .next-btn {
     background: rgba(255,255,255,0.3);
     border: none;
@@ -148,40 +154,7 @@ body {
     max-height: 300px;
     object-fit: cover;
     border-radius: 5px;
-}
-
-.about-header {
-    background-color: #E5E5E5;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/about-header-bg.jpg');
-    background-size: cover;
-    background-position: center;
-    color: #fff;
-    padding: 120px 0;
-    position: relative;
-}
-
-.about-header h1 {
-    font-weight: bold;
-    font-size: 48px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-}
-
-.about-content {
-    padding: 80px 0;
-    background-color: #fff;
-    color: #333;
-}
-
-.about-text {
-    font-size: 16px;
-    line-height: 1.8;
-    color: #555;
-    margin-bottom: 20px;
-}
-
-.about-image {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
     overflow: hidden;
 }
 
@@ -196,7 +169,7 @@ body {
 
 .services-clients {
     padding: 80px 0;
-    background-color: #fff;
+    background-color: white;
     color: #000;
 }
 
@@ -217,6 +190,12 @@ body {
     width: 80%;
 }
 
+/* ----- Our Products ----- */
+
+
+
+/* ----- Services ----- */
+
 .services-header {
     background: url('images/rosal-services.jpg') no-repeat center center;
     background-size: cover;
@@ -230,7 +209,7 @@ body {
 }
 
 .services-section {
-    background-color: #fff;
+    background-color: white;
     padding: 60px 0;
 }
 
@@ -275,70 +254,101 @@ body {
     line-height: 1.7;
 }
 
-footer {
-    background-color: #1A0C02;
+/* ----- About Us ----- */
+
+.about-header {
+    background-color: #E5E5E5;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/about-header-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 120px 0;
+    position: relative;
+}
+
+.about-header h1 {
+    font-weight: bold;
+    font-size: 48px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.about-content {
+    padding: 80px 0;
+    background-color: white;
+    color: #333;
+}
+
+.about-text {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+/* ----- Quote/Contact ----- */
+
+.contact-section {
+    background-color: #E5E5E5;
+    background-image: linear-gradient(rgba(229, 229, 229, 0.9), rgba(229, 229, 229, 0.9)), url('images/marble-texture.jpg');
+    background-size: cover;
+    background-position: center;
+    min-height: calc(100vh - 350px); /* Adjust based on your navbar and footer height */
+    display: flex;
+    align-items: center;
     padding: 60px 0;
 }
 
-footer h3 {
-    font-size: 24px;
+.contact-form-container {
+    background-color: #111;
+    color: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.form-title {
+    font-size: 32px;
     font-weight: bold;
+    margin-bottom: 30px;
+    text-transform: uppercase;
 }
 
-footer p, footer a {
-    color: rgba(255, 255, 255, 0.8);
+.form-control, .form-select {
+    background-color: #f5f5f5;
+    border: none;
+    padding: 12px 15px;
+    font-size: 16px;
+    border-radius: 5px;
+    margin-bottom: 15px;
 }
 
-.contact-item {
-    display: flex;
-    gap: 10px;
-    align-items: flex-start;
+.form-control:focus, .form-select:focus {
+    box-shadow: 0 0 0 3px rgba(217, 162, 67, 0.3);
+    border-color: #D9A243;
 }
 
-.social-links a {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    text-decoration: none;
-    transition: color 0.3s ease-in-out ;
+textarea.form-control {
+    min-height: 150px;
+    resize: vertical;
 }
 
-footer .col-md-6.col-lg-3 a {
-    text-decoration: none;
+.btn-send {
+    background-color: #D9A243;
+    border-color: #D9A243;
+    color: white;
+    font-weight: bold;
+    padding: 12px;
+    font-size: 18px;
+    text-transform: uppercase;
+    transition: background-color 0.3s;
 }
 
-.col-md-6.col-lg-3 a:hover {
-    text-decoration: underline;
+.btn-send:hover {
+    background-color: #c69238;
+    border-color: #c69238;
 }
 
-.social-links a:hover{
-    color: #1877F2;
-}
-
-@media (min-width: 1600px) {
-    .slider-controls {
-        padding: 0 8%;
-    }
-}
-
-@media (max-width: 1200px) {
-    .slider-controls {
-        padding: 0 6%;
-    }
-}
-
-@media (max-width: 992px) {
-    .slider-controls {
-        padding: 0 4%;
-    }
-}
-
-@media (max-width: 768px) {
-    .slider-controls {
-        padding: 0 2%;
-    }
-}
-
+/* ----- Admin ----- */
 
 .admin-login-body {
     background-color: #1A0C02;
@@ -349,7 +359,7 @@ footer .col-md-6.col-lg-3 a {
     align-items: center;
     justify-content: center;
     font-family: 'Poppins', sans-serif;
-    color: #fff;
+    color: white;
 }
 
 .admin-login-container {
@@ -388,7 +398,7 @@ footer .col-md-6.col-lg-3 a {
     height: 120px;
     border-radius: 50%;
     margin-bottom: 20px;
-    background-color: #fff;
+    background-color: white;
     padding: 5px;
 }
 
@@ -406,10 +416,14 @@ footer .col-md-6.col-lg-3 a {
 }
 
 .login-form-container {
-    width: 80%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .form-title {
+    text-align: center;
     font-size: 32px;
     font-weight: bold;
     margin-bottom: 30px;
@@ -462,23 +476,6 @@ footer .col-md-6.col-lg-3 a {
     align-items: center;
 }
 
-.remember-me input[type="checkbox"] {
-    margin-right: 8px;
-    accent-color: #D9A243;
-}
-
-.forgot-password {
-    color: #fff;
-    text-decoration: none;
-    font-size: 14px;
-    transition: color 0.3s;
-}
-
-.forgot-password:hover {
-    color: #D9A243;
-    text-decoration: underline;
-}
-
 .login-btn {
     width: 100%;
     padding: 12px;
@@ -502,7 +499,7 @@ footer .col-md-6.col-lg-3 a {
 }
 
 .back-to-site a {
-    color: #fff;
+    color: white;
     text-decoration: none;
     font-size: 14px;
     transition: color 0.3s;
@@ -511,3 +508,88 @@ footer .col-md-6.col-lg-3 a {
 .back-to-site a:hover {
     color: #D9A243;
 }
+
+        /* ----------------------- */
+
+        @media (min-width: 1600px) {
+            .slider-controls {
+                padding: 0 8%;
+            }
+        }
+
+        @media (max-width: 1200px) {
+            .slider-controls {
+                padding: 0 6%;
+            }
+        }
+
+        @media (max-width: 992px) {
+            .slider-controls {
+                padding: 0 4%;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .contact-section {
+                padding: 40px 0;
+            }
+            
+            .form-title {
+                font-size: 24px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .slider-controls {
+                padding: 0 2%;
+            }
+            .contact-form-container {
+                padding: 30px 20px;
+            }
+            
+            .form-title {
+                font-size: 28px;
+            }
+        }
+
+    /* ----- Footer ----- */
+
+    footer {
+        background-color: #1A0C02;
+        padding: 60px 0;
+    }
+
+    footer h3 {
+        font-size: 24px;
+        font-weight: bold;
+    }
+
+    footer p, footer a {
+        color: rgba(255, 255, 255, 0.8);
+    }
+
+    .contact-item {
+        display: flex;
+        gap: 10px;
+        align-items: flex-start;
+    }
+
+    .social-links a {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        text-decoration: none;
+        transition: color 0.3s ease-in-out;
+    }
+
+    footer .col-md-6.col-lg-3 a {
+        text-decoration: none;
+    }
+
+    .col-md-6.col-lg-3 a:hover {
+        text-decoration: underline;
+    }
+
+    .social-links a:hover {
+        color: #1877F2;
+    }
