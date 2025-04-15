@@ -16,7 +16,7 @@
             </button>
     
             <div class="collapse navbar-collapse d-lg-flex" id="navbarNav">
-                <a class="navbar-brand col-lg-3 me-0" href="home.php">
+                <a class="navbar-brand col-lg-3 me-0" href="">
                     <img src="images/rosal_marble_supply-logo.jpg" alt="RMS Logo" class="logo-img">
                 </a>
                 <ul class="navbar-nav col-lg-6 justify-content-lg-center">
