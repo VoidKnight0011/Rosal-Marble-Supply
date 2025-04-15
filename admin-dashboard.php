@@ -4,6 +4,9 @@ session_start();
     include("functions.php");
 
     $user_data = check_login($con);
+
+        $sql = "SELECT * from products";
+        $result = mysqli_query($con, $sql);
 ?>
 
 <!DOCTYPE html>
@@ -14,7 +17,6 @@ session_start();
     <title>Admin Dashboard - Rosal Marble Supply</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -74,16 +76,32 @@ session_start();
                             <table class="table table-hover product-table mb-0">
                                 <thead>
                                     <tr>
-                                        <th>Product ID</th>
                                         <th>Product Name</th>
+                                        <th>Product Image</th>
                                         <th>Description</th>
                                         <th>Price</th>
                                         <th>Quantity</th>
                                     </tr>
                                 </thead>
+
+                                <?php
+                                    while($row = mysqli_fetch_assoc($result))
+                                    {
+                                ?>
+
                                 <tbody>
-                                    <!-- Table content will be populated with PHP -->
+                                <tr>
+                                    <td><?php echo $row['product_name'] ?></td>
+                                    <td><img width = "50" height = "50" src = "../product_image/<?php echo $row['product_name'] ?>"></td>
+                                    <td><?php echo $row['product_description'] ?></td>
+                                    <td><?php echo $row['product_price'] ?></td>
+                                    <td><?php echo $row['product_quantity'] ?></td>
+                                </tr>
                                 </tbody>
+                                
+                                <?php
+                                    }
+                                ?>
                             </table>
                         </div>
                     </div>
@@ -93,11 +111,6 @@ session_start();
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // JavaScript for handling dashboard interactions
-            // This will be useful when you integrate PHP for dynamic content
-        });
-    </script>
+    <script src = "script.js"></script>
 </body>
 </html>
