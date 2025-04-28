@@ -20,11 +20,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
                 $_SESSION['admin_id'] = $user_data['admin_id'];
                 header("Location: admin-dashboard.php");
                 die;
-            } else {
-                echo "Incorrect password!";
             }
-        } else {
-            echo "No user found with that username!";
         }
     } else {
         echo "Please enter some valid information!";

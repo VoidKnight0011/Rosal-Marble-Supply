@@ -40,18 +40,8 @@ session_start();
                     </li>
                     <ul>
                             <li>
-                                <a href="add-product.php">
+                                <a href="admin-add.php">
                                     <i class="fas fa-plus"></i> Add Products
-                                </a>
-                            </li>
-                            <li>
-                                <a href="edit-product.php">
-                                    <i class="fas fa-edit"></i> Edit Products
-                                </a>
-                            </li>
-                            <li>
-                                <a href="remove-product.php">
-                                    <i class="fas fa-trash"></i> Remove Products
                                 </a>
                             </li>
                         </ul>
@@ -78,9 +68,11 @@ session_start();
                                     <tr>
                                         <th>Product Name</th>
                                         <th>Product Image</th>
+                                        <th>Category</th>
                                         <th>Description</th>
                                         <th>Price</th>
                                         <th>Quantity</th>
+                                        <th>Options</th>
                                     </tr>
                                 </thead>
 
@@ -92,10 +84,15 @@ session_start();
                                 <tbody>
                                 <tr>
                                     <td><?php echo $row['product_name'] ?></td>
-                                    <td><img width = "50" height = "50" src = "../product_image/<?php echo $row['product_name'] ?>"></td>
+                                    <td><img id="php-img" src="uploads/<?php echo $row['product_image'] ?>" style="width: 100px; height: auto;"></td>
+                                    <td>c</td>
                                     <td><?php echo $row['product_description'] ?></td>
                                     <td><?php echo $row['product_price'] ?></td>
                                     <td><?php echo $row['product_quantity'] ?></td>
+                                    <td>
+                                        <button class = "btn btn-primary">Update</button>
+                                        <button class = "btn btn-primary">Delete</button>
+                                    </td>
                                 </tr>
                                 </tbody>
                                 
