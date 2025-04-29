@@ -293,13 +293,8 @@ body {
 
 .modal-header {
     background-color: #1A0C02;
-    color: black;
     border-bottom: none;
     padding: 15px 20px;
-}
-
-.modal-title {
-    font-weight: bold;
 }
 
 .btn-close {
@@ -338,7 +333,7 @@ body {
 }
 
 .product-inquiry {
-    background-color:black;
+    background-color: #1A0C02;
     padding: 15px;
     border-radius: 8px;
     margin-top: 20px;
@@ -449,6 +444,7 @@ textarea.form-control {
     background-color: #c69238;
     border-color: #c69238;
 }
+
 
 
 /* ----- Admin ----- */

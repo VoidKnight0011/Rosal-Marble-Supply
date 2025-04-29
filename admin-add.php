@@ -54,21 +54,9 @@ if(isset($_POST['add_product'])) {
             
             <nav class="admin-nav">
                 <ul>
-                    <li>
-                        <a href="admin-dashboard.php">
-                        <i class="fas fa-th-large"></i> Dashboard
-                        </a>
-                    </li>
-                    <li class="active">
-                        <a href="add-product.php">
-                            <i class="fas fa-plus"></i> Add Products
-                        </a>
-                    </li>
-                    <li>
-                        <a href="logout.php">
-                            <i class="fas fa-sign-out-alt"></i> Log Out
-                        </a>
-                    </li>
+                    <li><a href="admin-dashboard.php"><i class="fas fa-th-large"></i> Dashboard</a></li>
+                    <li class="active"><a href="add-product.php"><i class="fas fa-plus"></i> Add Products</a></li>
+                    <li><a href="logout.php"><i class="fas fa-sign-out-alt"></i> Log Out</a></li>
                 </ul>
             </nav>
         </div>
@@ -77,58 +65,58 @@ if(isset($_POST['add_product'])) {
             <header class="admin-header">
                 <h1>Add to List of Products</h1>
             </header>
-            <div class="container">
-        
-        <?php
-        if(isset($message)) {
-            foreach($message as $msg) {
-                echo '<span>'.$msg.'</span>';
-            }
-        }
-        ?>
-        <div class="form-container">
-            <h2 class="form-title">Product Information</h2>
             
-            <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST" enctype="multipart/form-data">
-                <div class="mb-3">
-                    <label for="product_name" class="form-label">Product Name</label>
-                    <input type="text" class="form-control" id="product_name" name="product_name" required>
-                </div>
+            <div class="container">
+                <?php
+                if(isset($message)) {
+                    foreach($message as $msg) {
+                        echo '<span>'.$msg.'</span>';
+                    }
+                }
+                ?>
                 
-                <div class="mb-3">
-                    <label for="product_description" class="form-label">Product Description</label>
-                    <textarea class="form-control" id="product_description" name="product_description" rows="4" required></textarea>
+                <div class="form-container">
+                    <h2 class="form-title">Product Information</h2>
+                    
+                    <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST" enctype="multipart/form-data">
+                        <div class="mb-3">
+                            <label for="product_name" class="form-label">Product Name</label>
+                            <input type="text" class="form-control" id="product_name" name="product_name" required>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label for="product_description" class="form-label">Product Description</label>
+                            <textarea class="form-control" id="product_description" name="product_description" rows="4" required></textarea>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label for="product_price" class="form-label">Product Price</label>
+                            <div class="input-group">
+                                <span class="input-group-text">$</span>
+                                <input type="number" step="0.01" class="form-control" name="product_price" required>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label for="product_quantity" class="form-label">Product Quantity</label>
+                            <input type="number" class="form-control" name="product_quantity" required>
+                        </div>
+                        
+                        <div class="mb-4">
+                            <label for="product_image" class="form-label">Product Image</label>
+                            <input class="form-control" type="file" id="product_image" name="product_image" accept="image/*" required>
+                        </div>
+                        
+                        <div class="form-actions">
+                            <a href="admin-dashboard.php" class="btn btn-cancel">Cancel</a>
+                            <button type="submit" class="btn btn-submit" name="add_product">Add Product</button>
+                        </div>
+                    </form>
                 </div>
-                
-                <div class="mb-3">
-                    <label for="product_price" class="form-label">Product Price</label>
-                    <div class="input-group">
-                        <span class="input-group-text">$</span>
-                        <input type="number" step="0.01" class="form-control" name="product_price" required>
-                    </div>
-                </div>
-                
-                <div class="mb-3">
-                    <label for="product_quantity" class="form-label">Product Quantity</label>
-                    <input type="number" class="form-control" name="product_quantity" required>
-                </div>
-                
-                <div class="mb-4">
-                    <label for="product_image" class="form-label">Product Image</label>
-                    <input class="form-control" type="file" id="product_image" name="product_image" accept="image/*" required>
-                </div>
-                
-                <div class="form-actions">
-                    <a href="admin-dashboard.php" class="btn btn-cancel">Cancel</a>
-                    <button type="submit" class="btn btn-submit" name="add_product">Add Product</button>
-                </div>
-            </form>
-        </div>
-    </div>
+            </div>
         </div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="script.js"></script>
 </body>
 </html>

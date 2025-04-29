@@ -1,3 +1,10 @@
+<?php
+    include("connection.php");
+
+        $sql = "SELECT * from products";
+        $result = mysqli_query($con, $sql);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,7 +14,6 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="styles-addition-products.css">
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark">
@@ -42,24 +48,23 @@
     <section class="products-grid py-5">
         <div class="container">
             <div class="row g-4">
+                <?php while($row = mysqli_fetch_assoc($result)) { ?>
                 <div class="col-md-6 col-lg-4">
                     <div class="product-card" data-bs-toggle="modal" data-bs-target="#productModal" 
-                         data-product-id="1"
-                         data-product-name="Golden Pebbles"
-                         data-product-desc="Beautiful golden-colored pebbles perfect for landscaping and decorative purposes. These natural stones add warmth and elegance to any outdoor space, garden pathways, or water features."
-                         data-product-image="golden-pebbles.jpg"
-                         data-product-origin="Philippines"
-                         data-product-finish="Natural, Polished">
+                         data-product-desc="<?php echo $row['product_description']; ?>"
+                         data-product-image="uploads/<?php echo $row['product_image']; ?>"
+                         data-product-price="<?php echo $row['product_price']; ?>"
+                         data-product-quantity="<?php echo $row['product_quantity']; ?>">
                         <div class="product-image">
-                            <img src="golden-pebbles.jpg" alt="Golden Pebbles" class="img-fluid">
+                            <img src="uploads/<?php echo $row['product_image']; ?>" alt="<?php echo $row['product_name']; ?>" class="img-fluid">
                         </div>
                         <div class="product-info mt-3">
-                            <h4 class="product-title">Golden Pebbles</h4>
+                            <h4 class="product-title"><?php echo $row['product_name']; ?></h4>
+                            <div class="product-price">$<?php echo $row['product_price']; ?></div>
                         </div>
                     </div>
                 </div>
-
-    
+                <?php } ?>
             </div>
         </div>
     </section>
@@ -84,7 +89,7 @@
                             
                             <div class="product-details mb-4">
                                 <div class="detail-item mb-2">
-                                    <strong>Origin:</strong> <span id="modalProductOrigin"></span>
+                                    <span id="modalProductOrigin"></span>
                                 </div>
                                 <div class="detail-item mb-2">
                                     <strong>Available Finishes:</strong> <span id="modalProductFinish"></span>
@@ -93,7 +98,7 @@
                             
                             <div class="product-inquiry">
                                 <h5 class="mb-3">Interested in this product?</h5>
-                                <a href="contact.php" class="btn btn-primary product-quote-btn" id="modalQuoteBtn">
+                                <a href="quote.php" class="btn btn-primary product-quote-btn" id="modalQuoteBtn">
                                     Get a Quote for This Product
                                 </a>
                             </div>
