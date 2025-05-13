@@ -5,8 +5,15 @@ session_start();
 
     $user_data = check_login($con);
 
-        $sql = "SELECT * from products";
-        $result = mysqli_query($con, $sql);
+if (isset($_GET['delete'])) {
+    $id = intval($_GET['delete']);
+    mysqli_query($con, "DELETE FROM products WHERE id = $id");
+    header('Location: admin-dashboard.php');
+    exit;
+}
+
+$sql    = "SELECT * FROM products";
+$result = mysqli_query($con, $sql);
 ?>
 
 <!DOCTYPE html>
@@ -67,11 +74,9 @@ session_start();
                                 <thead>
                                     <tr>
                                         <th>Product Name</th>
+                                        <th>Product Category</th>
                                         <th>Product Image</th>
-                                        <th>Category</th>
                                         <th>Description</th>
-                                        <th>Price</th>
-                                        <th>Quantity</th>
                                         <th>Options</th>
                                     </tr>
                                 </thead>
@@ -84,13 +89,12 @@ session_start();
                                 <tbody>
                                 <tr>
                                     <td><?php echo $row['product_name'] ?></td>
+                                    <td>H</td>
                                     <td><img id="php-img" src="uploads/<?php echo $row['product_image'] ?>" style="width: 100px; height: auto;"></td>
-                                    <td>c</td>
                                     <td><?php echo $row['product_description'] ?></td>
-                                    <td><?php echo $row['product_price'] ?></td>
                                     <td>
-                                        <button class = "btn btn-primary">Update</button>
-                                        <button class = "btn btn-primary">Delete</button>
+                                        <a href = "update_admin.php?edit=<?php echo $row['id']; ?>" class = "btn btn-primary">Update</a>
+                                        <a href = "delete_admin.php?delete=<?php echo $row['id']; ?>" class = "btn btn-primary">Delete</a>
                                     </td>
                                 </tr>
                                 </tbody>

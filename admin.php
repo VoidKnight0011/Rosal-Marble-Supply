@@ -4,12 +4,13 @@ session_start();
 include("connection.php");
 include("functions.php");
 
+$errorMessage = "";
+
 if ($_SERVER['REQUEST_METHOD'] == "POST") {
     $username = $_POST['username'];
     $password = $_POST['password'];
 
     if (!empty($username) && !empty($password) && !is_numeric($username)) {
-
         $query = "SELECT * FROM admin WHERE username = '$username' LIMIT 1";
         $result = mysqli_query($con, $query);
 
@@ -20,14 +21,17 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
                 $_SESSION['admin_id'] = $user_data['admin_id'];
                 header("Location: admin-dashboard.php");
                 die;
+            } else {
+                $errorMessage = "Incorrect Username or Password";
             }
+        } else {
+            $errorMessage = "Incorrect Username or Password";
         }
     } else {
-        echo "Please enter some valid information!";
+        $errorMessage = "Please enter valid username and password";
     }
 }
 ?>
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -64,6 +68,10 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
                             <input type="password" name="password" id="text" placeholder="Password" required>
                             <label for="password">Password</label>
                         </div>
+
+                        <?php if (!empty($errorMessage)): ?>
+                            <div class="error-message"><?php echo $errorMessage; ?></div>
+                        <?php endif; ?>
 
                         <input type="submit" class="btn btn-primary login-btn" value="Login" name="adminLogin">
                     </form>

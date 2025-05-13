@@ -52,14 +52,12 @@
                 <div class="col-md-6 col-lg-4">
                     <div class="product-card" data-bs-toggle="modal" data-bs-target="#productModal" 
                          data-product-desc="<?php echo $row['product_description']; ?>"
-                         data-product-image="uploads/<?php echo $row['product_image']; ?>"
-                         data-product-price="<?php echo $row['product_price']; ?>">
+                         data-product-image="uploads/<?php echo $row['product_image']; ?>">
                         <div class="product-image">
                             <img src="uploads/<?php echo $row['product_image']; ?>" alt="<?php echo $row['product_name']; ?>" class="img-fluid">
                         </div>
                         <div class="product-info mt-3">
                             <h4 class="product-title"><?php echo $row['product_name']; ?></h4>
-                            <div class="product-price">$<?php echo $row['product_price']; ?></div>
                         </div>
                     </div>
                 </div>

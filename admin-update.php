@@ -82,15 +82,6 @@ if(isset($_POST['add_product'])) {
                             <input type="text" class="form-control" id="product_name" name="product_name" required>
                         </div>
 
-                                <select class="form-select" id="recipient" name="recipient">
-                                    <option value="" selected>Choose Stone Type</option>
-                                    <option>Cement</option>
-                                    <option>Crazy Cut</option>
-                                    <option>Marbles</option>
-                                    <option>Pebbles</option>
-                                    <option>Rubbles</option>
-                                    <option>Stone</option>
-                                </select>
                         
                         <div class="mb-3">
                             <label for="product_description" class="form-label">Product Description</label>
