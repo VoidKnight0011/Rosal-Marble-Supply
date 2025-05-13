@@ -92,7 +92,7 @@ if (isset($_GET['delete'])) {
                                     <td><img id="php-img" src="uploads/<?php echo $row['product_image'] ?>" style="width: 100px; height: auto;"></td>
                                     <td><?php echo $row['product_description'] ?></td>
                                     <td>
-                                        <a href = "admin-update.php" class = "btn btn-primary">Update</a>
+                                        <a href = "admin-update.php?edit=<?php echo $row['product_id']?>" class = "btn btn-primary">Update</a>
                                         <a href = "admin-dashboard.php?delete=<?php echo $row['product_id']?>" class = "btn btn-primary">Delete</a>
 
                                     </td>
