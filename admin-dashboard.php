@@ -88,7 +88,6 @@ session_start();
                                     <td>c</td>
                                     <td><?php echo $row['product_description'] ?></td>
                                     <td><?php echo $row['product_price'] ?></td>
-                                    <td><?php echo $row['product_quantity'] ?></td>
                                     <td>
                                         <button class = "btn btn-primary">Update</button>
                                         <button class = "btn btn-primary">Delete</button>

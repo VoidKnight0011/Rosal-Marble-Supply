@@ -9,16 +9,15 @@ if(isset($_POST['add_product'])) {
     $product_name = $_POST['product_name'];
     $product_description = $_POST['product_description'];
     $product_price = $_POST['product_price'];
-    $product_quantity = $_POST['product_quantity'];
 
     $product_image_name = $_FILES['product_image']['name'];
     $product_image_tmp_name = $_FILES['product_image']['tmp_name'];
     $product_image_folder = 'uploads/'.$product_image_name;
 
-    if(empty($product_name) || empty($product_price) || empty($product_image_name) || empty($product_description) || empty($product_quantity)) {
+    if(empty($product_name) || empty($product_price) || empty($product_image_name) || empty($product_description)) {
         $message[] = 'Please Fill Out Everything!';
     } else {
-        $insert = "INSERT INTO products(product_name, product_description, product_price, product_quantity, product_image) VALUES('$product_name', '$product_description', '$product_price', '$product_quantity', '$product_image_name')";
+        $insert = "INSERT INTO products(product_name, product_description, product_price, product_image) VALUES('$product_name', '$product_description', '$product_price', '$product_image_name')";
         $upload = mysqli_query($con, $insert);
         if($upload) {
             move_uploaded_file($product_image_tmp_name, $product_image_folder);
@@ -95,11 +94,6 @@ if(isset($_POST['add_product'])) {
                                 <span class="input-group-text">$</span>
                                 <input type="number" step="0.01" class="form-control" name="product_price" required>
                             </div>
-                        </div>
-                        
-                        <div class="mb-3">
-                            <label for="product_quantity" class="form-label">Product Quantity</label>
-                            <input type="number" class="form-control" name="product_quantity" required>
                         </div>
                         
                         <div class="mb-4">

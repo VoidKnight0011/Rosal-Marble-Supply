@@ -10,7 +10,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Products</title>
+    <title>Our Products - Rosal Marble Supply</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
@@ -53,8 +53,7 @@
                     <div class="product-card" data-bs-toggle="modal" data-bs-target="#productModal" 
                          data-product-desc="<?php echo $row['product_description']; ?>"
                          data-product-image="uploads/<?php echo $row['product_image']; ?>"
-                         data-product-price="<?php echo $row['product_price']; ?>"
-                         data-product-quantity="<?php echo $row['product_quantity']; ?>">
+                         data-product-price="<?php echo $row['product_price']; ?>">
                         <div class="product-image">
                             <img src="uploads/<?php echo $row['product_image']; ?>" alt="<?php echo $row['product_name']; ?>" class="img-fluid">
                         </div>
