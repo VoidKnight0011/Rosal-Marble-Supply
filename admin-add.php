@@ -8,15 +8,16 @@ $user_data = check_login($con);
 if(isset($_POST['add_product'])) {
     $product_name = $_POST['product_name'];
     $product_description = $_POST['product_description'];
+    $product_category = $_POST['category'];
 
     $product_image_name = $_FILES['product_image']['name'];
     $product_image_tmp_name = $_FILES['product_image']['tmp_name'];
     $product_image_folder = 'uploads/'.$product_image_name;
 
-    if(empty($product_name) || empty($product_image_name) || empty($product_description)) {
+    if(empty($product_name) || empty($product_image_name)|| empty($product_category) || empty($product_description)) {
         $message[] = 'Please Fill Out Everything!';
     } else {
-        $insert = "INSERT INTO products(product_name, product_description, product_image) VALUES('$product_name', '$product_description', '$product_image_name')";
+        $insert = "INSERT INTO products(product_name, category, product_description, product_image) VALUES('$product_name', '$product_category','$product_description', '$product_image_name')";
         $upload = mysqli_query($con, $insert);
         if($upload) {
             move_uploaded_file($product_image_tmp_name, $product_image_folder);
@@ -25,7 +26,8 @@ if(isset($_POST['add_product'])) {
             $message[] = 'Could Not Add Product!';
         }
     }
-}
+};
+
 ?>
 
 <!DOCTYPE html>
@@ -82,15 +84,15 @@ if(isset($_POST['add_product'])) {
                             <input type="text" class="form-control" id="product_name" name="product_name" required>
                         </div>
 
-                                <select class="form-select" id="recipient" name="recipient">
-                                    <option value="" selected>Choose Stone Type</option>
-                                    <option>Cement</option>
-                                    <option>Crazy Cut</option>
-                                    <option>Marbles</option>
-                                    <option>Pebbles</option>
-                                    <option>Rubbles</option>
-                                    <option>Stone</option>
-                                </select>
+                    <select class="form-select" id="category" name="category">
+                        <option value="" selected>Choose Stone Type</option>
+                        <option>Cement</option>
+                        <option>Crazy Cut</option>
+                        <option>Marbles</option>
+                        <option>Pebbles</option>
+                        <option>Rubbles</option>
+                        <option>Stone</option>
+                    </select>
                         
                         <div class="mb-3">
                             <label for="product_description" class="form-label">Product Description</label>

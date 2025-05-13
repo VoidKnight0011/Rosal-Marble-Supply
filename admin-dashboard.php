@@ -5,15 +5,14 @@ session_start();
 
     $user_data = check_login($con);
 
-if (isset($_GET['delete'])) {
-    $id = intval($_GET['delete']);
-    mysqli_query($con, "DELETE FROM products WHERE id = $id");
-    header('Location: admin-dashboard.php');
-    exit;
-}
-
 $sql    = "SELECT * FROM products";
 $result = mysqli_query($con, $sql);
+
+if (isset($_GET['delete'])) {
+    $id = $_GET['delete'];
+    mysqli_query($con, "DELETE FROM products WHERE product_id = $id");
+    header('location: admin-dashboard.php');
+}
 ?>
 
 <!DOCTYPE html>
@@ -89,12 +88,13 @@ $result = mysqli_query($con, $sql);
                                 <tbody>
                                 <tr>
                                     <td><?php echo $row['product_name'] ?></td>
-                                    <td>H</td>
+                                    <td><?php echo $row['category']?></td>
                                     <td><img id="php-img" src="uploads/<?php echo $row['product_image'] ?>" style="width: 100px; height: auto;"></td>
                                     <td><?php echo $row['product_description'] ?></td>
                                     <td>
-                                        <a href = "update_admin.php?edit=<?php echo $row['id']; ?>" class = "btn btn-primary">Update</a>
-                                        <a href = "delete_admin.php?delete=<?php echo $row['id']; ?>" class = "btn btn-primary">Delete</a>
+                                        <a href = "admin-update.php" class = "btn btn-primary">Update</a>
+                                        <a href = "admin-dashboard.php?delete=<?php echo $row['product_id']?>" class = "btn btn-primary">Delete</a>
+
                                     </td>
                                 </tr>
                                 </tbody>
