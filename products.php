@@ -10,7 +10,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Products - Rosal Marble Supply</title>
+    <title>Our Products</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
@@ -24,7 +24,7 @@
     
             <div class="collapse navbar-collapse d-lg-flex" id="navbarNav">
                 <a class="navbar-brand col-lg-3 me-0" href="home.php">
-                    <img src="images/rosal_marble_supply-logo.jpg" alt="RMS Logo" class="logo-img">
+                    <img src="images/rosal_marble_supply-logo.jpg" class="logo-img">
                 </a>
                 <ul class="navbar-nav col-lg-6 justify-content-lg-center">
                     <li class="nav-item"><a class="nav-link" href="home.php">Home</a></li>
@@ -45,69 +45,54 @@
         </div>
     </section>
 
-    <section class="products-grid py-5">
-        <div class="container">
-            <div class="row g-4">
-                <?php while($row = mysqli_fetch_assoc($result)) { ?>
+<section class="products-grid py-5">
+    <div class="container">
+        <div class="row g-4">
+            <?php while($row = mysqli_fetch_assoc($result)) { ?>
                 <div class="col-md-6 col-lg-4">
-                    <div class="product-card" data-bs-toggle="modal" data-bs-target="#productModal" 
-                         data-product-desc="<?php echo $row['product_description']; ?>"
-                         data-product-image="uploads/<?php echo $row['product_image']; ?>">
+                    <div class="product-card" onclick="showProductModal('<?php echo $row['product_name']; ?>', '<?php echo $row['category']; ?>','<?php echo $row['product_description']; ?>', 'uploads/<?php echo $row['product_image']; ?>')">
                         <div class="product-image">
                             <img src="uploads/<?php echo $row['product_image']; ?>" alt="<?php echo $row['product_name']; ?>" class="img-fluid">
                         </div>
-                        <div class="product-info mt-3">
+                        <div class="product-info">
                             <h4 class="product-title"><?php echo $row['product_name']; ?></h4>
                         </div>
                     </div>
                 </div>
-                <?php } ?>
-            </div>
+            <?php } ?>
         </div>
-    </section>
+    </div>
+</section>
     
-    <div class="modal fade" id="productModal" tabindex="-1" aria-labelledby="productModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="productModalLabel">Product Details</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <div class="row">
-                        <div class="col-md-6 mb-3 mb-md-0">
-                            <div class="modal-product-image">
-                                <img src="/placeholder.svg" alt="Product Image" class="img-fluid rounded" id="modalProductImage">
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <h3 id="modalProductName" class="mb-3"></h3>
-                            <p id="modalProductDesc" class="mb-4"></p>
-                            
-                            <div class="product-details mb-4">
-                                <div class="detail-item mb-2">
-                                    <span id="modalProductOrigin"></span>
-                                </div>
-                                <div class="detail-item mb-2">
-                                    <strong>Available Finishes:</strong> <span id="modalProductFinish"></span>
-                                </div>
-                            </div>
-                            
-                            <div class="product-inquiry">
-                                <h5 class="mb-3">Interested in this product?</h5>
-                                <a href="quote.php" class="btn btn-primary product-quote-btn" id="modalQuoteBtn">
-                                    Get a Quote for This Product
-                                </a>
-                            </div>
-                        </div>
+    <div class="modal fade" id="productModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Product Details</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-6">
+                        <img id="modalImage" src="/placeholder.svg" class="img-fluid">
                     </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <div class="col-md-6">
+                        <h3 id="modalName"></h3>
+                        <p>
+                            <span id = "semi-bold">Category:</span> 
+                            <span id="modalCategory" style="color: black;">
+                        </p>
+                        <p>
+                            <span id = "semi-bold">Description:</span>
+                            <span id="modalDesc" style="color: black;"></p>
+                        </p>
+                        <a href="quote.php" class="btn btn-primary w-100 mt-4">Get a Quote</a>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+</div>
     
     <footer class="py-5">
         <div class="container">
@@ -148,6 +133,6 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src = "script.js"></script>
+    <script src = "script_02.js"></script>
 </body>
 </html>

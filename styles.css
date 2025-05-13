@@ -62,6 +62,10 @@ body {
     background-color: #89672d;
 }
 
+.admin-btn {
+    margin: 5px;
+}
+
 /* ===== HERO SECTION ===== */
 .hero {
     overflow-x: hidden;
@@ -301,17 +305,24 @@ body {
     margin-bottom: 10px;
 }
 
-.product-description {
-    color: #666;
-    font-size: 14px;
-    line-height: 1.5;
-}
-
 /* ===== MODAL STYLES ===== */
 .modal-content {
     border: none;
     border-radius: 10px;
     overflow: hidden;
+}
+
+#modalName {
+    font-weight: bolder;
+}
+
+#modalImage {
+    margin-bottom: 25px;
+    border-radius: 5px;
+}
+
+#semi-bold {
+    font-weight: 600;
 }
 
 .modal-header {
@@ -329,45 +340,14 @@ body {
     padding: 25px;
 }
 
-.modal-product-image {
-    height: 300px;
-    overflow: hidden;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
-
-.modal-product-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.modal-footer {
-    border-top: none;
-    padding: 15px 20px;
-}
-
-.product-details .detail-item {
-    margin-bottom: 10px;
-}
-
-.product-details strong {
-    color: #1A0C02;
-}
-
-.product-inquiry {
-    background-color: #1A0C02;
-    padding: 15px;
-    border-radius: 8px;
-    margin-top: 20px;
-}
-
-.product-quote-btn {
-    width: 100%;
-    margin-top: 10px;
+#productModal .modal-body,
+#productModal .modal-body p,
+#productModal #modalProductDesc {
+    color: black;
 }
 
 /* ===== SERVICE ITEMS ===== */
+
 .service-item {
     height: 100%;
     transition: all 0.3s ease;
@@ -395,6 +375,7 @@ body {
 }
 
 /* ===== CONTACT SECTION ===== */
+
 .contact-section {
     background-color: #E5E5E5;
     background-image: linear-gradient(rgba(0, 0, 0, 0.5)), url('images/rosal-quote.jpg');
@@ -439,7 +420,7 @@ body {
 textarea.form-control {
     min-height: 150px;
     resize: vertical;
-        outline: 1px solid gray;
+    outline: 1px solid gray;
 }
 
 input.form-control {
@@ -472,7 +453,7 @@ footer {
     padding: 60px 0;
 }
 
-footer h3 {
+footer h3, footer h4 {
     font-size: 24px;
     font-weight: bold;
 }
@@ -531,7 +512,7 @@ footer .col-md-6.col-lg-3 a {
 }
 
 .logo-section {
-    transform: translateY(75%);
+    transform: translateY(35%);
     height: 100%;
     display: flex;
     align-items: center;
@@ -568,6 +549,12 @@ footer .col-md-6.col-lg-3 a {
     margin: 0;
 }
 
+.company-name {
+    font-size: 16px;
+    font-weight: 600;
+    text-align: center;
+}
+
 .form-section {
     height: 100%;
     display: flex;
@@ -580,14 +567,6 @@ footer .col-md-6.col-lg-3 a {
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-
-.form-title {
-    text-align: center;
-    font-size: 32px;
-    font-weight: bold;
-    margin-bottom: 30px;
-    text-align: left;
 }
 
 .inputGroup {
@@ -622,13 +601,6 @@ footer .col-md-6.col-lg-3 a {
 .inputGroup label {
     position: absolute;
     left: -9999px;
-}
-
-.form-options {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 25px;
 }
 
 .login-btn {
@@ -693,25 +665,6 @@ footer .col-md-6.col-lg-3 a {
     margin-bottom: 20px;
 }
 
-.admin-logo {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    background-color: white;
-    padding: 5px;
-    margin-bottom: 10px;
-}
-
-.company-name {
-    font-size: 16px;
-    font-weight: 600;
-    text-align: center;
-}
-
-img#php-img {
-    background-color: black;
-}
-
 .admin-welcome {
     padding: 0 20px;
     margin-bottom: 30px;
@@ -753,6 +706,21 @@ img#php-img {
     text-align: center;
 }
 
+.admin-nav > ul > li > ul {
+    list-style: none;
+    padding-left: 20px;
+    margin-top: 5px;
+}
+
+.admin-nav > ul > li > ul > li {
+    margin-bottom: 5px;
+}
+
+.admin-nav > ul > li > ul > li > a {
+    padding: 8px 20px 8px 30px;
+    font-size: 14px;
+}
+
 .main-content {
     flex: 1;
     padding: 0;
@@ -774,14 +742,6 @@ img#php-img {
 
 .content-container {
     padding: 0 30px 30px;
-}
-
-.back-link:hover {
-    color: #D9A243;
-}
-
-.btn-login:hover {
-    background-color: #c69238;
 }
 
 /* Admin Dashboard Tables */
@@ -817,28 +777,16 @@ img#php-img {
     background-color: #f9f9f9;
 }
 
-.btn-edit {
-    color: #4a6fdc;
-    background: none;
-    border: none;
+img#php-img {
+    background-color: black;
 }
 
-.btn-delete {
-    color: #dc4a4a;
-    background: none;
-    border: none;
+.product-image-admin {
+    max-width: 200px;
+    max-height: 200px;
+    border-radius: 5px;
 }
 
-.btn-edit:hover, .btn-delete:hover {
-    opacity: 0.8;
-}
-
-.admin-actions {
-    display: flex;
-    justify-content: flex-end;
-}
-
-/* Admin Forms */
 .form-container {
     background-color: white;
     border-radius: 10px;
@@ -888,60 +836,6 @@ img#php-img {
     margin-top: 20px;
 }
 
-.alert {
-    margin-bottom: 20px;
-}
-
-.finish-options {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
-}
-
-.form-check {
-    margin-bottom: 10px;
-}
-
-.form-check-input:checked {
-    background-color: #D9A243;
-    border-color: #D9A243;
-}
-
-/* Fix for nested ul in sidebar */
-.admin-nav > ul > li > ul {
-    list-style: none;
-    padding-left: 20px;
-    margin-top: 5px;
-}
-
-.admin-nav > ul > li > ul > li {
-    margin-bottom: 5px;
-}
-
-.admin-nav > ul > li > ul > li > a {
-    padding: 8px 20px 8px 30px;
-    font-size: 14px;
-}
-
-.image-preview {
-    width: 100%;
-    height: 200px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    margin-top: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    display: none;
-}
-
-.image-preview img {
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: contain;
-}
-
 /* ===== RESPONSIVE STYLES ===== */
 @media (min-width: 1600px) {
     .slider-controls {
@@ -974,13 +868,13 @@ img#php-img {
         font-size: 28px;
     }
     
-    /* Admin Login Responsive */
     .admin-login-container {
         width: 95%;
     }
     
     .logo-section {
         padding: 30px 15px;
+        transform: translateY(0);
     }
     
     .logo-section::after {
@@ -994,10 +888,6 @@ img#php-img {
     
     .company-name h1 {
         font-size: 32px;
-    }
-
-        .logo-section {
-        transform: translateY(0);
     }
     
     .form-section {
@@ -1014,14 +904,9 @@ img#php-img {
         font-size: 24px;
     }
     
-    /* Admin Login Responsive */
     .admin-login-container {
         width: 100%;
         border-radius: 0;
-    }
-
-    .logo-section {
-        transform: translateY(0);
     }
     
     .admin-logo {

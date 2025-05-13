@@ -5,28 +5,60 @@ include("functions.php");
 
 $user_data = check_login($con);
 
+// Check if ID is provided in the URL
+if(!isset($_GET['edit'])) {
+    header('location: admin-dashboard.php');
+    exit;
+}
+
 $id = $_GET['edit'];
 
 if(isset($_POST['update_product'])) {
     $product_name = $_POST['product_name'];
     $product_description = $_POST['product_description'];
     $product_category = $_POST['category'];
+    $product_id = $_POST['product_id']; // Get the hidden product ID
 
-    $product_image_name = $_FILES['product_image']['name'];
-    $product_image_tmp_name = $_FILES['product_image']['tmp_name'];
-    $product_image_folder = 'uploads/'.$product_image_name;
-
-    if(empty($product_name) || empty($product_image_name)|| empty($product_category) || empty($product_description)) {
-        $message[] = 'Please Fill Out Everything!';
-    } else {
-        $update = "UPDATE products SET product_name = '$product_name', category = '$product_category', product_description = '$product_description', product_image = '$product_image_name' WHERE product_id = $id";
+    // Check if a new image was uploaded
+    if(!empty($_FILES['product_image']['name'])) {
+        $product_image_name = $_FILES['product_image']['name'];
+        $product_image_tmp_name = $_FILES['product_image']['tmp_name'];
+        $product_image_folder = 'uploads/'.$product_image_name;
+        
+        // Update with new image
+        $update = "UPDATE products SET product_name = '$product_name', category = '$product_category', 
+                  product_description = '$product_description', product_image = '$product_image_name' 
+                  WHERE product_id = $product_id";
+                  
         $upload = mysqli_query($con, $update);
         if($upload) {
             move_uploaded_file($product_image_tmp_name, $product_image_folder);
+            header('location: admin-dashboard.php');
+            exit;
         } else {
-            $message[] = 'Could Not Add Product!';
+            $message[] = 'Could Not Update Product!';
+        }
+    } else {
+        // Update without changing the image
+        $update = "UPDATE products SET product_name = '$product_name', category = '$product_category', 
+                  product_description = '$product_description' WHERE product_id = $product_id";
+                  
+        $upload = mysqli_query($con, $update);
+        if($upload) {
+            header('location: admin-dashboard.php');
+            exit;
+        } else {
+            $message[] = 'Could Not Update Product!';
         }
     }
+}
+
+// Get the product data
+$select = mysqli_query($con, "SELECT * FROM products WHERE product_id = $id");
+$row = mysqli_fetch_assoc($select);
+if(!$row) {
+    header('location: admin-dashboard.php');
+    exit;
 }
 ?>
 
@@ -68,47 +100,62 @@ if(isset($_POST['update_product'])) {
             
             <div class="container">
                 <?php
-                $id = $_GET['edit'];
-                $select = mysqli_query($con, "SELECT * FROM products WHERE product_id = $id");
-                $row = mysqli_fetch_assoc($select);
-
+                if(isset($message)) {
+                    foreach($message as $msg) {
+                        echo '<div class="alert alert-danger">'.$msg.'</div>';
+                    }
+                }
                 ?>
                 
                 <div class="form-container">
                     <h2 class="form-title">Product Information</h2>
                     
-                    <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST" enctype="multipart/form-data">
+                    <form action="" method="POST" enctype="multipart/form-data">
+                        <input type="hidden" name="product_id" value="<?php echo $id; ?>">
+                        
                         <div class="mb-3">
                             <label for="product_name" class="form-label">Product Name</label>
-                            <input type="text" class="form-control" id="product_name" name="product_name" required value = "<?php echo $row['product_name']; ?>">
+                            <input type="text" class="form-control" id="product_name" name="product_name" required value="<?php echo $row['product_name']; ?>">
                         </div>
 
-                    <select class="form-select" id="category" name="category">
-                        <option value="" selected>Choose Stone Type</option>
-                        <option>Cement</option>
-                        <option>Crazy Cut</option>
-                        <option>Marbles</option>
-                        <option>Pebbles</option>
-                        <option>Rubbles</option>
-                        <option>Stone</option>
-                    </select>
+                        <div class="mb-3">
+                            <label for="category" class="form-label">Product Category</label>
+                            <select class="form-select" id="category" name="category">
+                                <option value="">Choose Stone Type</option>
+                                <option <?php if($row['category'] == 'Cement') echo 'selected'; ?>>Cement</option>
+                                <option <?php if($row['category'] == 'Crazy Cut') echo 'selected'; ?>>Crazy Cut</option>
+                                <option <?php if($row['category'] == 'Marbles') echo 'selected'; ?>>Marbles</option>
+                                <option <?php if($row['category'] == 'Pebbles') echo 'selected'; ?>>Pebbles</option>
+                                <option <?php if($row['category'] == 'Rubbles') echo 'selected'; ?>>Rubbles</option>
+                                <option <?php if($row['category'] == 'Stone') echo 'selected'; ?>>Stone</option>
+                            </select>
+                        </div>
                         
                         <div class="mb-3">
                             <label for="product_description" class="form-label">Product Description</label>
                             <textarea class="form-control" id="product_description" name="product_description" rows="4" required><?php echo $row['product_description']; ?></textarea>
                         </div>
                         
+
                         <div class="mb-4">
                             <label for="product_image" class="form-label">Product Image</label>
-                            <input class="form-control" type="file" id="product_image" name="product_image" accept="image/*" required  value = "<?php $row['product_image']?>">
+                            <input class="form-control" type="file" id="product_image" name="product_image" accept="image/*">
+
+                                                <?php if(!empty($row['product_image'])): ?>
+                            <div class="mt-2">
+                                <p>Current image:</p>
+                                <img class = "product-image-admin" src="uploads/<?php echo $row['product_image']; ?>">
+                            </div>
+                            <?php endif; ?>
                         </div>
+                            <small class="text-muted">Leave empty to keep the current image</small>
+                    
                         
                         <div class="form-actions">
                             <a href="admin-dashboard.php" class="btn btn-cancel">Cancel</a>
                             <button type="submit" class="btn btn-submit" name="update_product">Update Product</button>
                         </div>
                     </form>
-
                 </div>
             </div>
         </div>
