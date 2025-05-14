@@ -59,7 +59,7 @@
             <div class="row">
                 <div class="col-lg-5 mb-4 mb-lg-0">
                     <h3 class="mb-3">Rosal Marble Supply</h3>
-                    <p>Embark on a journey of transformation with Rosal Marble Supply.</p>
+                    <p>We specialize in providing premium quality stones and marble to elevate your Projects. With Guaranteed quality and exceptional service, Secured with unparalleled service and craftmanship making your vision a reality. </p>
                 </div>
                 <div class="col-md-6 col-lg-3 mb-4 mb-lg-0">
                     <h4 class="mb-3">COMPANY</h4>
