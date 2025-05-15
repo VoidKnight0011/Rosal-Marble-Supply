@@ -17,11 +17,11 @@
             </button>
     
             <div class="collapse navbar-collapse d-lg-flex" id="navbarNav">
-                <a class="navbar-brand col-lg-3 me-0" href="index.php">
+                <a class="navbar-brand col-lg-3 me-0" href="home.php">
                     <img src="images/rosal_marble_supply-logo.jpg" class="logo-img">
                 </a>
                 <ul class="navbar-nav col-lg-6 justify-content-lg-center">
-                    <li class="nav-item"><a class="nav-link" href="index.php">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="home.php">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="products.php">Our Products</a></li>
                     <li class="nav-item"><a class="nav-link" href="services.php">Services</a></li>
                     <li class="nav-item"><a class="nav-link" href="about.php">About Us</a></li>
