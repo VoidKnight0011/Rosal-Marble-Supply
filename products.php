@@ -99,7 +99,7 @@
             <div class="row">
                 <div class="col-lg-5 mb-4 mb-lg-0">
                     <h3 class="mb-3">Rosal Marble Supply</h3>
-                    <p>Embark on a journey of transformation with Rosal Marble Supply. Let your vision come to life, captivate with your creations, and experience the harmony of natural stone in your space.</p>
+                    <p id = "rosal-footer-p">We specialize in providing premium quality stones and marble to elevate your Projects. With Guaranteed quality and exceptional service, Secured with unparalleled service and craftmanship making your vision a reality. </p>
                 </div>
                 <div class="col-md-6 col-lg-3 mb-4 mb-lg-0">
                     <h4 class="mb-3">COMPANY</h4>
@@ -113,26 +113,27 @@
                     <h4 class="mb-3">CONTACT INFORMATION</h4>
                     <div class="contact-item mb-3">
                         <i class="fas fa-map-marker-alt"></i>
-                        <p class="mb-0">774 corner St. Jude, Acres Bukang Liwayway, Cebu City, Philippines</p>
+                        <p>774 corner St. Jude, Acres Bukang Liwayway, Cebu City, Philippines</p>
                     </div>
                     <div class="contact-item mb-3">
                         <i class="fas fa-phone"></i>
-                        <p class="mb-0">0962 137 4908</p>
+                        <p>0962 137 4908</p>
                     </div>
                     <div class="contact-item mb-3">
                         <i class="fas fa-envelope"></i>
-                        <p class="mb-0">rosalmarblesupply@gmail.com</p>
+                        <p>rosalmarblesupply@gmail.com</p>
                     </div>
                     <h4 class="mb-2 mt-4">FOLLOW US</h4>
-                    <div class="social-links">
-                        <a href="https://www.facebook.com/profile.php?id=100091891141733"><i class="fab fa-facebook-f"></i> Facebook</a>
+                    <span class="social-links">
+                        <a href="https://www.facebook.com/profile.php?id=100091891141733">
+                            <i class="fab fa-facebook-f"></i> Facebook
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
     </footer>
-
+</body>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src = "script_02.js"></script>
-</body>
 </html>

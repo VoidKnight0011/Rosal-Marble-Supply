@@ -59,7 +59,7 @@
             <div class="row">
                 <div class="col-lg-5 mb-4 mb-lg-0">
                     <h3 class="mb-3">Rosal Marble Supply</h3>
-                    <p>We specialize in providing premium quality stones and marble to elevate your Projects. With Guaranteed quality and exceptional service, Secured with unparalleled service and craftmanship making your vision a reality. </p>
+                    <p id = "rosal-footer-p">We specialize in providing premium quality stones and marble to elevate your Projects. With Guaranteed quality and exceptional service, Secured with unparalleled service and craftmanship making your vision a reality. </p>
                 </div>
                 <div class="col-md-6 col-lg-3 mb-4 mb-lg-0">
                     <h4 class="mb-3">COMPANY</h4>
@@ -84,7 +84,7 @@
                         <p>rosalmarblesupply@gmail.com</p>
                     </div>
                     <h4 class="mb-2 mt-4">FOLLOW US</h4>
-                    <div class="social-links">
+                    <span class="social-links">
                         <a href="https://www.facebook.com/profile.php?id=100091891141733">
                             <i class="fab fa-facebook-f"></i> Facebook
                         </a>
@@ -93,8 +93,7 @@
             </div>
         </div>
     </footer>
-
+</body>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="script_01.js"></script>
-</body>
 </html>

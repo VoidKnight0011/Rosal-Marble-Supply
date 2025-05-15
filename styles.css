@@ -246,14 +246,13 @@ body {
         url('images/rosal-about.jpg');
 }
 
-/* ===== CONTENT SECTIONS ===== */
+
 .products-grid, .services-section, .about-content {
     background-color: white;
     padding: 60px 0;
     color: #333;
 }
 
-/* ===== PRODUCT CARDS ===== */
 .product-card, .service-item {
     background-color: white;
     color: black;
@@ -305,7 +304,8 @@ body {
     margin-bottom: 10px;
 }
 
-/* ===== MODAL STYLES ===== */
+/* _____ Modal _____*/
+
 .modal-content {
     border: none;
     border-radius: 10px;
@@ -447,11 +447,23 @@ select#category {
     border-color: #c69238;
 }
 
-/* ===== FOOTER ===== */
+/* ___ Manatad ___ */
+
 footer {
     background-color: #1A0C02;
     padding: 60px 0;
 }
+
+#rosal-footer-p {
+    text-align: justify;
+    width: 500px;
+}
+#rosal-footer-p2 {
+    text-align: justify;
+    width: 270px;
+}
+
+
 
 footer h3, footer h4 {
     font-size: 24px;
@@ -488,7 +500,6 @@ footer .col-md-6.col-lg-3 a {
     color: #1877F2;
 }
 
-/* ===== ADMIN STYLES ===== */
 /* ----- Admin Login ----- */
 .admin-login-body {
     background-color: #1A0C02;
@@ -744,7 +755,7 @@ footer .col-md-6.col-lg-3 a {
     padding: 0 30px 30px;
 }
 
-/* Admin Dashboard Tables */
+
 .card {
     border-radius: 10px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
@@ -836,7 +847,7 @@ img#php-img {
     margin-top: 20px;
 }
 
-/* ===== RESPONSIVE STYLES ===== */
+/*      Responsiveness   */
 @media (min-width: 1600px) {
     .slider-controls {
         padding: 0 8%;
