@@ -17,7 +17,7 @@
     
             <div class="collapse navbar-collapse d-lg-flex" id="navbarNav">
                 <a class="navbar-brand col-lg-3 me-0" href="home.php">
-                    <img src="images/rosal_marble_supply-logo.jpg" alt="RMS Logo" class="logo-img">
+                    <img src="images/rosal_marble_supply-logo.jpg" class="logo-img">
                 </a>
                 <ul class="navbar-nav col-lg-6 justify-content-lg-center">
                     <li class="nav-item"><a class="nav-link" href="home.php">Home</a></li>
@@ -44,7 +44,7 @@
                 <div class="col-md-6 mb-5">
                     <div class="service-item">
                         <div class="service-image">
-                            <img src="images/rosal-quality.jpg" alt="Marble Installation" class="img-fluid">
+                            <img src="images/rosal-quality.jpg" class="img-fluid">
                         </div>
                         <h3 class="service-title text-center mt-4">Premium Quality</h3>
                         <p class="service-description">We only get from trusted suppliers for our marble, bricks, and stones, ensuring great craftsmanship and long-lasting durability. Your satisfaction is our priority.</p>
@@ -54,7 +54,7 @@
                 <div class="col-md-6 mb-5">
                     <div class="service-item">
                         <div class="service-image">
-                            <img src="images/rosal-installation.jpg" alt="Marble Restoration" class="img-fluid">
+                            <img src="images/rosal-installation.jpg" class="img-fluid">
                         </div>
                         <h3 class="service-title text-center mt-4">Installation</h3>
                         <p class="service-description">Our professional staff will carefully and precisely install your chosen materials, ensuring a faultless result that exceeds your expectations.</p>
@@ -64,7 +64,7 @@
                 <div class="col-md-6 mb-5">
                     <div class="service-item">
                         <div class="service-image">
-                            <img src="images/rosal-collection.jpg" alt="Custom Fabrication" class="img-fluid">
+                            <img src="images/rosal-collection.jpg" class="img-fluid">
                         </div>
                         <h3 class="service-title text-center mt-4">Extensive Collection</h3>
                         <p class="service-description">Explore a variety of colors, textures, and finishes to complement your individual style and preferences. We have a large selection that will meet your needs.</p>
@@ -74,7 +74,7 @@
                 <div class="col-md-6 mb-5">
                     <div class="service-item">
                         <div class="service-image">
-                            <img src="images/service-maintenance.jpg" alt="Maintenance & Sealing" class="img-fluid">
+                            <img src="images/service-maintenance.jpg" class="img-fluid">
                         </div>
                         <h3 class="service-title text-center mt-4">Personalized Consultation</h3>
                         <p class="service-description">Our devoted team is here to help you every step of the way. Schedule a meeting to review your project's specifications and obtain tailored recommendations.</p>

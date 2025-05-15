@@ -17,11 +17,11 @@
             </button>
     
             <div class="collapse navbar-collapse d-lg-flex" id="navbarNav">
-                <a class="navbar-brand col-lg-3 me-0" href="home.php">
-                    <img src="images/rosal_marble_supply-logo.jpg" alt="RMS Logo" class="logo-img">
+                <a class="navbar-brand col-lg-3 me-0" href="index.php">
+                    <img src="images/rosal_marble_supply-logo.jpg" class="logo-img">
                 </a>
                 <ul class="navbar-nav col-lg-6 justify-content-lg-center">
-                    <li class="nav-item"><a class="nav-link" href="home.php">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.php">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="products.php">Our Products</a></li>
                     <li class="nav-item"><a class="nav-link" href="services.php">Services</a></li>
                     <li class="nav-item"><a class="nav-link" href="about.php">About Us</a></li>
@@ -39,7 +39,7 @@
                 <div class="col-md-10 col-lg-8">
                     <div class="contact-form-container">
                         <h1 class="form-title text-center mb-4">SEND A MESSAGE TO US</h1>
-                        <form id="contactForm" action="send-message.php" method="post">
+                        <form id="contactForm">
                             <div class="mb-3">
                                 <input type="text" class="form-control" id="name" name="name" placeholder="Your Name" required>
                             </div>
@@ -47,22 +47,22 @@
                                 <input type="email" class="form-control" id="email" name="email" placeholder="Your Email" required>
                             </div>
                             <div class="mb-3">
-                                <input type="tel" class="form-control" id="phone" name="phone" placeholder="Phone Number" required>
+                                <input type="tel" class="form-control" id="phone" name="phone" placeholder="Phone Number">
                             </div>
                             <div class="mb-3">
-                                <input type="text" class="form-control" id="subject" name="subject" placeholder="Subject" required>
+                                <input type="text" class="form-control" id="subject" name="subject" placeholder="Subject">
                             </div>
                             <div class="mb-3">
                                 <select class="form-select" id="recipient" name="recipient">
+                                    <option value="rosalmarblesupply@gmail.com" selected>rosalmarblesupply@gmail.com</option>
                                     <option value="" selected>Email Recipient</option>
-                                    <option value="sales">rosalmarblesupply@gmail.com</option>
                                 </select>
                             </div>
                             <div class="mb-4">
                                 <textarea class="form-control" id="message" name="message" rows="6" placeholder="Your Message" required></textarea>
                             </div>
                             <div class="d-grid">
-                                <button type="submit" class="btn btn-primary btn-send">Send</button>
+                                <button type="button" id="sendEmail" class="btn btn-primary btn-send">Send</button>
                             </div>
                         </form>
                     </div>
@@ -76,21 +76,21 @@
             <div class="row">
                 <div class="col-lg-5 mb-4 mb-lg-0">
                     <h3 class="mb-3">Rosal Marble Supply</h3>
-                    <p id = "rosal-footer-p">We specialize in providing premium quality stones and marble to elevate your Projects. With Guaranteed quality and exceptional service, Secured with unparalleled service and craftmanship making your vision a reality. </p>
+                    <p id="rosal-footer-p">We specialize in providing premium quality stones and marble to elevate your Projects. With Guaranteed quality and exceptional service, Secured with unparalleled service and craftmanship making your vision a reality.</p>
                 </div>
                 <div class="col-md-6 col-lg-3 mb-4 mb-lg-0">
                     <h4 class="mb-3">COMPANY</h4>
                     <ul class="list-unstyled">
-                        <li class="mb-2"><a href="services.php">Our Services</a></li>
-                        <li class="mb-2"><a href="clients.php">Our Clients</a></li>
-                        <li class="mb-2"><a href="about.php">About Us</a></li>
+                        <li class="mb-2"><a href="services.html">Our Services</a></li>
+                        <li class="mb-2"><a href="clients.html">Our Clients</a></li>
+                        <li class="mb-2"><a href="about.html">About Us</a></li>
                     </ul>
                 </div>
                 <div class="col-md-6 col-lg-4">
                     <h4 class="mb-3">CONTACT INFORMATION</h4>
                     <div class="contact-item mb-3">
                         <i class="fas fa-map-marker-alt"></i>
-                        <p id = "rosal-footer-p2">774 corner St. Jude, Acres Bukang Liwayway, Cebu City, Philippines</p>
+                        <p id="rosal-footer-p2">774 corner St. Jude, Acres Bukang Liwayway, Cebu City, Philippines</p>
                     </div>
                     <div class="contact-item mb-3">
                         <i class="fas fa-phone"></i>
@@ -101,7 +101,7 @@
                         <p>rosalmarblesupply@gmail.com</p>
                     </div>
                     <h4 class="mb-2 mt-4">FOLLOW US</h4>
-                    <span class="social-links">
+                    <div class="social-links">
                         <a href="https://www.facebook.com/profile.php?id=100091891141733">
                             <i class="fab fa-facebook-f"></i> Facebook
                         </a>
@@ -110,7 +110,8 @@
             </div>
         </div>
     </footer>
-</body>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="script_1.js"></script>
+    <script src = "script_02.js"></script>
+</body>
 </html>

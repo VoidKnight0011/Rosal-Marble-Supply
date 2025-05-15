@@ -17,7 +17,7 @@
     
             <div class="collapse navbar-collapse d-lg-flex" id="navbarNav">
                 <a class="navbar-brand col-lg-3 me-0" href="home.php">
-                    <img src="images/rosal_marble_supply-logo.jpg" alt="RMS Logo" class="logo-img">
+                    <img src="images/rosal_marble_supply-logo.jpg" class="logo-img">
                 </a>
                 <ul class="navbar-nav col-lg-6 justify-content-lg-center">
                     <li class="nav-item"><a class="nav-link" href="home.php">Home</a></li>
@@ -32,7 +32,7 @@
         </div>
     </nav>
 
-    <section class="about-header py-5">
+    <section class="clients-header py-5">
         <div class="container text-center">
             <h1 class="display-4 fw-bold">OUR CLIENTS</h1>
         </div>
@@ -42,12 +42,13 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-6 mb-5 mb-lg-0">
-                    <p class="about-text">Rosal Marble Supply is your trusted partner for all your stone-related needs in Cebu City, Philippines. We're not just a supplier; we're your solution to creating breathtaking landscapes and interiors.</p>
-                    <p class="about-text">Whether you're enhancing your home, revamping your office, or embarking on a landscaping project, Rosal Marble Supply is your partner in creating spaces that leave a lasting impression. </p>
+                    <p class="about-text">Here at <strong>Rosal Marble Supply</strong>, we are proud to provide for a variety of customers— homeowners who want to add some sparkle to their surroundings, to large-scale project builders and contractors.</p>
+                    <p class="about-text">Our customers not only appreciate the excellence of our marble and stone products, but also the customized service and personal touch that come with working with a family business. No matter if it's a small garden transformation or large-scale building development, we strive to offer reliable materials and enduring relationships.</p>
+                    <p class="about-text">Your vision is our goal, and we're honored to be a trusted member of your projects.</p>
                 </div>
                 <div class="col-lg-6">
                     <div class="about-image">
-                        <img src="images/Rosal-Marble-Supply.jpg" alt="Rosal Marble Supply" class="img-fluid rounded">
+                        <img src="images/rosal-clients-2.jpg" class="img-fluid rounded">
                     </div>
                 </div>
             </div>
@@ -59,7 +60,7 @@
             <div class="row">
                 <div class="col-lg-5 mb-4 mb-lg-0">
                     <h3 class="mb-3">Rosal Marble Supply</h3>
-                    <p id = "rosal-footer-p">We specialize in providing premium quality stones and marble to elevate your Projects. With Guaranteed quality and exceptional service, Secured with unparalleled service and craftmanship making your vision a reality. </p>
+                    <p id="rosal-footer-p">We specialize in providing premium quality stones and marble to elevate your Projects. With Guaranteed quality and exceptional service, Secured with unparalleled service and craftmanship making your vision a reality.</p>
                 </div>
                 <div class="col-md-6 col-lg-3 mb-4 mb-lg-0">
                     <h4 class="mb-3">COMPANY</h4>
@@ -84,7 +85,7 @@
                         <p>rosalmarblesupply@gmail.com</p>
                     </div>
                     <h4 class="mb-2 mt-4">FOLLOW US</h4>
-                    <span class="social-links">
+                    <div class="social-links">
                         <a href="https://www.facebook.com/profile.php?id=100091891141733">
                             <i class="fab fa-facebook-f"></i> Facebook
                         </a>

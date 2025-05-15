@@ -86,7 +86,7 @@
                             <span id = "semi-bold">Description:</span>
                             <span id="modalDesc" style="color: black;"></p>
                         </p>
-                        <a href="quote.php" class="btn btn-primary w-100 mt-4">Get a Quote</a>
+                        <a href="quote.php" class="btn btn-primary black w-100 mt-4">Get a Quote</a>
                     </div>
                 </div>
             </div>
@@ -135,5 +135,5 @@
     </footer>
 </body>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src = "script_02.js"></script>
+    <script src="script_02.js"></script>
 </html>

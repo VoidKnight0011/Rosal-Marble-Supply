@@ -17,7 +17,7 @@
     
             <div class="collapse navbar-collapse d-lg-flex" id="navbarNav">
                 <a class="navbar-brand col-lg-3 me-0" href="">
-                    <img src="images/rosal_marble_supply-logo.jpg" alt="RMS Logo" class="logo-img">
+                    <img src="images/rosal_marble_supply-logo.jpg" class="logo-img">
                 </a>
                 <ul class="navbar-nav col-lg-6 justify-content-lg-center">
                     <li class="nav-item"><a class="nav-link active" href="home.php">Home</a></li>
@@ -57,7 +57,7 @@
                     <a href="about.php" class="btn btn-tertiary">More About Us <i class="fas fa-arrow-right"></i></a>
                 </div>
                 <div class="col-lg-6">
-                    <img src="images/rosal-img_1.jpg" alt="rosal/rosal-img_1" class="about-image">
+                    <img src="images/rosal-img_1.jpg" class="about-image">
                 </div>
             </div>
         </div>
