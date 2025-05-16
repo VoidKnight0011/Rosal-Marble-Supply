@@ -1,3 +1,15 @@
+<?php 
+session_start();
+
+$quoted = isset($_SESSION['quoted']) && $_SESSION['quoted'] === true;
+$quotedSubject = $quoted ? $_SESSION['quotedSubject'] : '';
+$quotedMessage = $quoted ? $_SESSION['quotedMessage'] : '';
+
+$_SESSION['quoted'] = false;
+$_SESSION['quotedSubject'] = '';
+$_SESSION['quotedMessage'] = '';
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -50,7 +62,7 @@
                                 <input type="tel" class="form-control" id="phone" name="phone" placeholder="Phone Number">
                             </div>
                             <div class="mb-3">
-                                <input type="text" class="form-control" id="subject" name="subject" placeholder="Subject">
+                                <input type="text" class="form-control" id="subject" name="subject" placeholder="Subject" value = "<?php echo htmlspecialchars($quotedSubject); ?>">
                             </div>
                             <div class="mb-3">
                                 <select class="form-select" id="recipient" name="recipient">
@@ -59,7 +71,7 @@
                                 </select>
                             </div>
                             <div class="mb-4">
-                                <textarea class="form-control" id="message" name="message" rows="6" placeholder="Your Message" required></textarea>
+                                <textarea class="form-control" id="message" name="message" rows="6" placeholder="Your Message" required><?php echo htmlspecialchars($quotedMessage); ?></textarea>
                             </div>
                             <div class="d-grid">
                                 <button type="button" id="sendEmail" class="btn btn-primary btn-send">Send</button>

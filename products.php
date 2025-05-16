@@ -1,5 +1,6 @@
 <?php
     include("connection.php");
+    include("functions.php");
 
         $sql = "SELECT * from products";
         $result = mysqli_query($con, $sql);
@@ -86,7 +87,7 @@
                             <span id = "semi-bold">Description:</span>
                             <span id="modalDesc" style="color: black;"></p>
                         </p>
-                        <a href="quote.php" class="btn btn-primary black w-100 mt-4">Get a Quote</a>
+                        <a href="#" id="quote-btn" onclick="getQuote()" class="btn btn-primary black w-100 mt-4">Get a Quote</a>
                     </div>
                 </div>
             </div>

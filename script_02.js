@@ -55,3 +55,10 @@ ${phone ? phone : ''}`;
   
     window.open(mailtoLink, '_blank');
 });
+
+function getQuote() {
+    const productName = document.getElementById('modalName').textContent;
+    const description = document.getElementById('modalDesc').textContent;
+    
+    window.location.href = 'get_quoted.php?subject=' + encodeURIComponent(productName) + '&message=' + encodeURIComponent(description);
+}

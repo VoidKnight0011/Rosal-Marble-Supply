@@ -696,7 +696,10 @@ footer .col-md-6.col-lg-3 a {
     text-align: center;
 }
 
-/* Admin Dashboard */
+
+
+
+
 .admin-container {
     display: flex;
     min-height: 100vh;
@@ -821,6 +824,8 @@ footer .col-md-6.col-lg-3 a {
     border-bottom: 1px solid #eee;
 }
 
+
+
 .product-table td {
     padding: 15px;
     vertical-align: middle;
@@ -890,7 +895,10 @@ img#php-img {
     margin-top: 20px;
 }
 
-/*      Responsiveness   */
+
+
+
+
 @media (min-width: 1600px) {
     .slider-controls {
         padding: 0 8%;

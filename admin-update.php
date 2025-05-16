@@ -5,7 +5,6 @@ include("functions.php");
 
 $user_data = check_login($con);
 
-// Check if ID is provided in the URL
 if(!isset($_GET['edit'])) {
     header('location: admin-dashboard.php');
     exit;
@@ -17,15 +16,13 @@ if(isset($_POST['update_product'])) {
     $product_name = $_POST['product_name'];
     $product_description = $_POST['product_description'];
     $product_category = $_POST['category'];
-    $product_id = $_POST['product_id']; // Get the hidden product ID
+    $product_id = $_POST['product_id'];
 
-    // Check if a new image was uploaded
     if(!empty($_FILES['product_image']['name'])) {
         $product_image_name = $_FILES['product_image']['name'];
         $product_image_tmp_name = $_FILES['product_image']['tmp_name'];
         $product_image_folder = 'uploads/'.$product_image_name;
         
-        // Update with new image
         $update = "UPDATE products SET product_name = '$product_name', category = '$product_category', 
                   product_description = '$product_description', product_image = '$product_image_name' 
                   WHERE product_id = $product_id";
@@ -39,7 +36,6 @@ if(isset($_POST['update_product'])) {
             $message[] = 'Could Not Update Product!';
         }
     } else {
-        // Update without changing the image
         $update = "UPDATE products SET product_name = '$product_name', category = '$product_category', 
                   product_description = '$product_description' WHERE product_id = $product_id";
                   
@@ -53,7 +49,6 @@ if(isset($_POST['update_product'])) {
     }
 }
 
-// Get the product data
 $select = mysqli_query($con, "SELECT * FROM products WHERE product_id = $id");
 $row = mysqli_fetch_assoc($select);
 if(!$row) {
@@ -141,7 +136,7 @@ if(!$row) {
                             <label for="product_image" class="form-label">Product Image</label>
                             <input class="form-control" type="file" id="product_image" name="product_image" accept="image/*">
 
-                                                <?php if(!empty($row['product_image'])): ?>
+                        <?php if(!empty($row['product_image'])): ?>
                             <div class="mt-2">
                                 <p>Current image:</p>
                                 <img class = "product-image-admin" src="uploads/<?php echo $row['product_image']; ?>">
