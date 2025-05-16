@@ -15,8 +15,8 @@ body {
 }
 
 .logo-img {
-    height: 45px;
-    width: 45px;
+    height: 65px;
+    width: 65px;
     border-radius: 50%;
     background-color: white;
 }
@@ -25,7 +25,9 @@ body {
     color: white;
     font-weight: 500;
     margin: 0 15px;
+    font-size: 19px;
 }
+
 
 .navbar-nav .nav-link.active {
     font-weight: bold;
@@ -229,11 +231,6 @@ body {
 
 .services-box h2, .clients-box h2 {
     font-weight: bolder;
-}
-
-.placeholder-lines {
-    margin: 30px 0;
-    width: 80%;
 }
 
 

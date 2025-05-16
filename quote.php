@@ -88,21 +88,21 @@ $_SESSION['quotedMessage'] = '';
             <div class="row">
                 <div class="col-lg-5 mb-4 mb-lg-0">
                     <h3 class="mb-3">Rosal Marble Supply</h3>
-                    <p id="rosal-footer-p">We specialize in providing premium quality stones and marble to elevate your Projects. With Guaranteed quality and exceptional service, Secured with unparalleled service and craftmanship making your vision a reality.</p>
+                    <p id = "rosal-footer-p">We specialize in providing premium quality stones and marble to elevate your Projects. With Guaranteed quality and exceptional service, Secured with unparalleled service and craftmanship making your vision a reality. </p>
                 </div>
                 <div class="col-md-6 col-lg-3 mb-4 mb-lg-0">
                     <h4 class="mb-3">COMPANY</h4>
                     <ul class="list-unstyled">
-                        <li class="mb-2"><a href="services.html">Our Services</a></li>
-                        <li class="mb-2"><a href="clients.html">Our Clients</a></li>
-                        <li class="mb-2"><a href="about.html">About Us</a></li>
+                        <li class="mb-2"><a href="services.php">Our Services</a></li>
+                        <li class="mb-2"><a href="clients.php">Our Clients</a></li>
+                        <li class="mb-2"><a href="about.php">About Us</a></li>
                     </ul>
                 </div>
                 <div class="col-md-6 col-lg-4">
                     <h4 class="mb-3">CONTACT INFORMATION</h4>
                     <div class="contact-item mb-3">
                         <i class="fas fa-map-marker-alt"></i>
-                        <p id="rosal-footer-p2">774 corner St. Jude, Acres Bukang Liwayway, Cebu City, Philippines</p>
+                        <p>774 corner St. Jude, Acres Bukang Liwayway, Cebu City, Philippines</p>
                     </div>
                     <div class="contact-item mb-3">
                         <i class="fas fa-phone"></i>
@@ -113,8 +113,8 @@ $_SESSION['quotedMessage'] = '';
                         <p>rosalmarblesupply@gmail.com</p>
                     </div>
                     <h4 class="mb-2 mt-4">FOLLOW US</h4>
-                    <div class="social-links">
-                        <a href="https://www.facebook.com/profile.php?id=100091891141733">
+                    <span class="social-links">
+                        <a href="https://www.facebook.com/profile.php?id=100091891141733" target = "_blank">
                             <i class="fab fa-facebook-f"></i> Facebook
                         </a>
                     </div>
@@ -122,8 +122,7 @@ $_SESSION['quotedMessage'] = '';
             </div>
         </div>
     </footer>
-
+</body>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src = "script_02.js"></script>
-</body>
 </html>

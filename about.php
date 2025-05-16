@@ -85,7 +85,7 @@
                     </div>
                     <h4 class="mb-2 mt-4">FOLLOW US</h4>
                     <span class="social-links">
-                        <a href="https://www.facebook.com/profile.php?id=100091891141733">
+                        <a href="https://www.facebook.com/profile.php?id=100091891141733" target = "_blank">
                             <i class="fab fa-facebook-f"></i> Facebook
                         </a>
                     </div>

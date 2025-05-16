@@ -36,8 +36,6 @@ Rosal Marble Supply
 774 corner St. Jude, Acres Bukang Liwayway
 Cebu City, Philippines
 
-Subject: ${subject}
-
 Dear Rosal Marble Supply Team,
 
 ${message}
